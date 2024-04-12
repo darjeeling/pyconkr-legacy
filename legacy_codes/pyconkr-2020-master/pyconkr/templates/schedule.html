@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% load thumbnail %}
+
+{% block title %}
+    {% trans 'Talks Schedule' %}
+{% endblock %}
+
+{% block content %}
+    {% if is_empty or not is_open %}
+        <h4 class="text-center">{% trans "Ready for content" %}</h4>
+    {% else %}
+        <script>
+            const isSat = () => {
+                document.getElementById("sat").classList.remove("disabled");
+                document.getElementById("sun").classList.add("disabled");
+                document.getElementById("is_sat").classList.add("selected");
+                document.getElementById("is_sun").classList.remove("selected");
+            };
+
+            const isSun = () => {
+                document.getElementById("sat").classList.add("disabled");
+                document.getElementById("sun").classList.remove("disabled");
+                document.getElementById("is_sat").classList.remove("selected");
+                document.getElementById("is_sun").classList.add("selected");
+            };
+            window.onload = () => {
+                {% if sunday %}
+                    isSun();
+                {% else %}
+                    isSat();
+                {% endif %}
+            };
+        </script>
+
+        <p>
+            {% trans '세션 시작 시간에 행사 안내 영상과 3분 토크가 시작합니다. 본 세션은 약 5분 후 시작됩니다.' %}
+        </p>
+        <p>
+            {% trans '티켓을 미처 구매하지 못 하셨더라도 참가자 슬랙에 참가하실 수 있습니다! <a href="/2020/slack/" target="_blank">여기서!</a>' %}
+        </p>
+
+        <ul class="days" style="margin-top: 2rem;">
+            <li id="is_sat" onclick="isSat()">{% trans '9/26 (토)' %}</li>
+            <li id="is_sun" onclick="isSun()">{% trans '9/27 (일)' %}</li>
+        </ul>
+        <table class="disabled" id="sat" style="width: 100%;">
+            <colgroup>
+                <col span="1" style="width: 10%;">
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 30%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th>{% trans '시간' %}</th>
+                <th>
+                    <span class="room">101</span>
+                    {% if live_weekday == 5 %}
+                        <div class="youtube_btn">
+                            <a target="_blank" href="{{ track1 }}">{% trans 'YouTube 바로 가기' %}</a>
+                        </div>
+                    {% endif %}
+                </th>
+                <th>
+                    <span class="room">102</span>
+                    {% if live_weekday == 5 %}
+                        <div class="youtube_btn">
+                            <a target="_blank" href="{{ track2 }}">{% trans 'YouTube 바로 가기' %}</a>
+                        </div>
+                    {% endif %}
+                </th>
+                <th>
+                    <span class="room">103</span>
+                    {% if live_weekday == 5 %}
+                        <div class="youtube_btn">
+                            <a target="_blank" href="{{ track3 }}">{% trans 'YouTube 바로 가기' %}</a>
+                        </div>
+                    {% endif %}
+                </th>
+            </tr>
+            {% for time, list in sat.items %}
+                <tr {% if time == live %}class="live"{% endif %}>
+                    <th>
+                        <span class="time">{{ time|date:"H:i" }}</span>
+                        {% if time == live %}
+                            <div class="live-badge">LIVE</div>
+                        {% endif %}
+                    </th>
+                    {% for l in list %}
+                        {% if l != '' %}
+                            {% if l.category == keynote or l.category == lt or l.category == opening %}
+                                <td colspan="3">
+                                    <div class="program">
+                                        {% if l.category == keynote %}
+                                            <a href="{% url 'keynote' %}#{{ l.pk }}">{{ l }}</a>
+                                        {% elif l.category != opening %}
+                                            <a href="{% url 'talk' pk=l.pk %}">{{ l }}</a>
+                                        {% elif l.category == opening %}
+                                            <span>{{ l }}</span>
+                                        {% endif %}
+                                        {% if l.language == 'E' %}
+                                            <small>
+                                                <span class="label label-english-session">{% trans "Schedule English Label" %}</span>
+                                            </small>
+                                        {% endif %}
+                                    </div>
+                                    {% if l.category != lt and l.category != opening %}
+                                        <div class="speaker">
+                                            {% if l.user.profile.image_small %}
+                                                <span class="speaker_image"><img src="{{ l.user.profile.image_small.url }}" alt="photo of {{ l.user.profile.name }}"></span>
+                                            {% else %}
+                                                <span class="speaker_image"><img src="{% static 'image/anonymous.png' %}" alt="No photo"></span>
+                                            {% endif %}
+                                            <span class="speaker_name">{{ l.user.profile.name }}</span>
+                                        </div>
+                                    {% endif %}
+                                    {% if l.category == lt and live == time %}
+                                        <div class="youtube_btn">
+                                            <a target="_blank" href="{{ lt1 }}">{% trans 'YouTube 바로 가기' %}</a>
+                                        </div>
+                                    {% endif %}
+                                </td>
+                            {% else %}
+                                <td>
+                                    <div class="program">
+                                        <a href="{% url 'talk' pk=l.pk %}">{{ l }}</a>
+                                        <small>
+                                            {% if l.category == pkot %}
+                                                <span class="label label-pkot-session">{% trans "Schedule Organizing Team Label" %}</span>
+                                            {% else %}
+                                                {% if l.difficulty == 'B' %}
+                                                    <span class="label label-difficulty-b">{% trans "Difficulty Beginner" %}</span>
+                                                {% elif l.difficulty == 'I' %}
+                                                    <span class="label label-difficulty-i">{% trans "Difficulty Intermediate" %}</span>
+                                                {% elif l.difficulty == 'E' %}
+                                                    <span class="label label-difficulty-e">{% trans "Difficulty Experienced" %}</span>
+                                                {% endif %}
+                                                {% if l.language == 'E' %}
+                                                    <span class="label label-english-session">{% trans "Schedule English Label" %}</span>
+                                                {% endif %}
+                                            {% endif %}
+                                        </small>
+                                    </div>
+                                    <div class="speaker">
+                                        {% if l.user.profile.image_small %}
+                                            <span class="speaker_image"><img src="{{ l.user.profile.image_small.url }}" alt="photo of {{ l.user.profile.name }}"></span>
+                                        {% else %}
+                                            <span class="speaker_image"><img src="{% static 'image/anonymous.png' %}" alt="No photo"></span>
+                                        {% endif %}
+                                        <span class="speaker_name">{{ l.user.profile.name }}</span>
+                                    </div>
+                                </td>
+                            {% endif %}
+                        {% else %}
+                            <td></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <table class="disabled" id="sun" style="width: 100%;">
+            <colgroup>
+                <col span="1" style="width: 10%;">
+                <col span="1" style="width: 45%;">
+                <col span="1" style="width: 45%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th>{% trans '시간' %}</th>
+                <th>
+                    <span class="room">104</span>
+                    {% if live_weekday == 6 %}
+                        <div class="youtube_btn">
+                            <a target="_blank" href="{{ track4 }}">{% trans 'YouTube 바로 가기' %}</a>
+                        </div>
+                    {% endif %}
+                </th>
+                <th>
+                    <span class="room">105</span>
+                    {% if live_weekday == 6 %}
+                        <div class="youtube_btn">
+                            <a target="_blank" href="{{ track5 }}">{% trans 'YouTube 바로 가기' %}</a>
+                        </div>
+                    {% endif %}
+                </th>
+            </tr>
+            {% for time, list in sun.items %}
+                <tr {% if time == live %}class="live"{% endif %}>
+                    <th>
+                        <span class="time">{{ time|date:"H:i" }}</span>
+                        {% if time == live %}
+                            <div class="live-badge">LIVE</div>
+                        {% endif %}
+                    </th>
+                    {% for l in list %}
+                        {% if l != '' %}
+                            {% if l.category == lt or l.category == closing %}
+                                <td colspan="2">
+                                    <div class="program">
+                                        {% if l.category != closing %}
+                                            <a href="{% url 'talk' pk=l.pk %}">{{ l }}</a>
+                                        {% else %}
+                                            <span>{{ l }}</span>
+                                        {% endif %}
+                                        {% if l.language == 'E' %}
+                                            <small>
+                                                <span class="label label-english-session">{% trans "Schedule English Label" %}</span>
+                                            </small>
+                                        {% endif %}
+                                    </div>
+                                    {% if live == time %}
+                                        <div class="youtube_btn">
+                                            <a target="_blank" href="
+                                                    {% if l.category == lt %}
+                                                        {{ lt2 }}
+                                                    {% else %}
+                                                        {{ closing_link }}
+                                                    {% endif %}
+                                                    ">{% trans 'YouTube 바로 가기' %}</a>
+                                        </div>
+                                    {% endif %}
+                                </td>
+                            {% else %}
+                                <td>
+                                    <div class="program">
+                                        <a href="{% url 'talk' pk=l.pk %}">{{ l }}</a>
+                                        <small>
+                                            {% if l.category == pkot %}
+                                                <span class="label label-pkot-session">{% trans "Schedule Organizing Team Label" %}</span>
+                                            {% else %}
+                                                {% if l.difficulty == 'B' %}
+                                                    <span class="label label-difficulty-b">{% trans "Difficulty Beginner" %}</span>
+                                                {% elif l.difficulty == 'I' %}
+                                                    <span class="label label-difficulty-i">{% trans "Difficulty Intermediate" %}</span>
+                                                {% elif l.difficulty == 'E' %}
+                                                    <span class="label label-difficulty-e">{% trans "Difficulty Experienced" %}</span>
+                                                {% endif %}
+                                                {% if l.language == 'E' %}
+                                                    <span class="label label-english-session">{% trans "Schedule English Label" %}</span>
+                                                {% endif %}
+                                            {% endif %}
+                                        </small>
+                                    </div>
+                                    <div class="speaker">
+                                        {% if l.user.profile.image_small %}
+                                            <span class="speaker_image"><img src="{{ l.user.profile.image_small.url }}" alt="photo of {{ l.user.profile.name }}"></span>
+                                        {% else %}
+                                            <span class="speaker_image"><img src="{% static 'image/anonymous.png' %}" alt="No photo"></span>
+                                        {% endif %}
+                                        <span class="speaker_name">{{ l.user.profile.name }}</span>
+                                    </div>
+                                </td>
+                            {% endif %}
+                        {% else %}
+                            <td></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

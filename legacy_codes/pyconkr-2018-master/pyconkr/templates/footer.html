@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<footer class="text-center">
+    <div class="container">
+        <h3>Dive into Diversity, {% trans "PyCon Korea 2018" %}</h3>
+        <p>{% trans "PyCon Korea 2018 is a product of PyCon Korea Organizing Team" %}</p>
+        <p>
+            {% trans "Powered by Django" %} | {% trans "Hosted on Naver D2" %}
+          <img class="hosting" src="{% static "image/naver-d2.png" %}" alt="Hosted on Naver D2">
+        </p>
+        <div>
+            <p>
+                {% trans "Stay connected" %}
+                <a class="btn-twitter" href="https://twitter.com/pyconkr">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="btn-facebook" href="https://facebook.com/pyconkorea">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="btn-github" href="https://github.com/pythonkr/pyconkr-2018">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a class="btn-flickr" href="https://www.flickr.com/photos/126829363@N08/sets/">
+                    <i class="fa fa-flickr"></i>
+                </a>
+            </p>
+        </div>
+
+    </div>
+</footer>
+

@@ -1,0 +1,40 @@
+{
+  "name": "teaser-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "serverless"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@types/material-ui": "^0.21.8",
+    "@types/react-bootstrap": "^0.32.25",
+    "@types/react-linkify": "^1.0.1",
+    "axios": "^0.21.4",
+    "next": "11.0.0",
+    "next-assets-import": "^0.0.2",
+    "next-images": "^1.8.1",
+    "next-seo": "^4.28.1",
+    "prettier": "^2.4.1",
+    "prettier-format": "^3.0.3",
+    "react": "17.0.2",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "17.0.2",
+    "react-linkify": "^1.0.0-alpha",
+    "serverless": "^2.46.0",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.11",
+    "eslint": "7.28.0",
+    "eslint-config-next": "11.0.0",
+    "typescript": "4.3.3"
+  }
+}

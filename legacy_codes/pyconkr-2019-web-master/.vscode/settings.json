@@ -1,0 +1,8 @@
+{
+  "tslint.jsEnable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  },
+  "typescript.format.enable": true,
+  "editor.tabSize": 2
+}

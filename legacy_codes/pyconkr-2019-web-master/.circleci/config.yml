@@ -1,0 +1,73 @@
+version: 2.1
+orbs:
+  aws-ecr: circleci/aws-ecr@0.0.2
+  aws-ecs: circleci/aws-ecs@0.0.8
+jobs:
+  build:
+    docker:
+      - image: circleci/node:11.10
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: run build
+          command: |
+            yarn && yarn build
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - aws-ecr/build_and_push_image:
+          context: AWS_DEPLOY
+          account-url: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
+          repo: "pyconkr-2019/frontend"
+          region: ${AWS_DEFAULT_REGION}
+          tag: "${CIRCLE_SHA1}"
+          filters:
+            branches:
+              only:
+                - develop
+                - master
+      - aws-ecs/deploy-service-update:
+          context: AWS_DEPLOY
+          requires:
+            - build
+            - aws-ecr/build_and_push_image
+          aws-region: ${AWS_DEFAULT_REGION}
+          family: "pyconkr-2019-web-dev-task"
+          cluster-name: "pyconkr-dev"
+          service-name: "pyconkr-2019-web-dev"
+          container-image-name-updates: "container=pyconkr-2019-web,tag=${CIRCLE_SHA1}"
+          verify-revision-is-deployed: true
+          filters:
+            branches:
+              only:
+                - develop
+      - aws-ecs/deploy-service-update:
+          context: AWS_DEPLOY
+          requires:
+            - build
+            - aws-ecr/build_and_push_image
+          aws-region: ${AWS_DEFAULT_REGION}
+          family: "pyconkr-2019-web-task"
+          cluster-name: "pyconkr-2019"
+          service-name: "pyconkr-2019-web"
+          container-image-name-updates: "container=pyconkr-2019-web,tag=${CIRCLE_SHA1}"
+          verify-revision-is-deployed: true
+          filters:
+            branches:
+              only:
+                - master

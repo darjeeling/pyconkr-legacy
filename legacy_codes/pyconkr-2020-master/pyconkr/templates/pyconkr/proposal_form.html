@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags i18n %}
+
+{% block title %}
+    {% trans "발표 제안" %}
+{% endblock %}
+
+{% block head-include %}
+{{ form.media }}
+{% endblock %}
+
+{% block content %}
+<div class="alert alert-warning" role="alert">
+  {% trans '📙제안서를 작성하시기 전에 <a href="/2020/contribution/cfp/guide/" target="_blank">발표안 작성 가이드</a>를 꼭 읽어주세요.' %}
+</div>
+
+{% crispy form %}
+
+{% endblock %}

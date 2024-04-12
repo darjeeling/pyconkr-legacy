@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block head-title %}{{ block.super }} {% trans "Program" %} | {{ program.title }}{% endblock %}
+{% block og-title %}{{ program.title }}{% endblock %}
+{% block og-desc %}{{ program.brief|striptags|safe }}{% endblock %}
+{% block title %}{{ program.title }}{% endblock %}
+
+{% block content %}
+<ul class="list-group">
+  {% if program.category %}
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-tag"></span> {{ program.category }}
+  </li>
+  {% endif %}
+
+  {% if program.difficulty %}
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-pencil"></span>
+      {% if program.difficulty == 'B' %}{% trans "Difficulty Beginner" %}
+      {% elif program.difficulty == 'I' %}{% trans "Difficulty Intermediate" %}
+      {% elif program.difficulty == 'E' %}{% trans "Difficulty Experienced" %}
+      {% endif %}
+  </li>
+  {% endif %}
+
+  {% if program.video_open_at %}
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-time"></span> {{ program.video_open_at }}
+  </li>
+  {% endif %}
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-volume-up"></span> {{ program.get_language_display }}
+  </li>
+</ul>
+
+{% if program.introduction %}
+<h3>{% trans "Description" %}</h3>
+    <p>{{ program.introduction | safe }}</p>
+{% endif %}
+
+{% if program.slide_url %}
+<h3>{% trans "Slide" %}</h3>
+    <p><a target="_blank" href="{{ program.slide_url }}">{{ program.slide_url }}</a></p>
+{% endif %}
+
+{% if program.video_url and video_opened %}
+<h3>{% trans "Video" %}</h3>
+    <p><a target="_blank" href="{{ program.video_url }}">{{ program.video_url }}</a></p>
+{% endif %}
+
+{% if editable %}
+    <div class="a_btn_container">
+        <a href="{% url "talk-update" pk=program.pk %}" class="a_btn large">{% trans "Edit" %}</a>
+    </div>
+{% endif %}
+{% endblock %}

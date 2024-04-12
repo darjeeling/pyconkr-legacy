@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ sponsor.name }}{% endblock %}
+
+{% block content %}
+<div class="row sponsor-proposal-detail">
+    <div>
+        <h4>{% trans "Sponsor level" %}</h4>
+        {{ sponsor.level }}
+    </div>
+    <hr>
+    <div>
+        <h4>{% trans "Sponsor description" %}</h4>
+        {% autoescape off %}
+            {{ sponsor.desc|default_if_none:"<br>" }}
+        {% endautoescape %}
+    </div>
+    <hr>
+    <div>
+        <h4>{% trans "Manager name" %}</h4>
+        {{ sponsor.manager_name }}
+    </div>
+    <hr>
+    <div>
+        <h4>{% trans "Manager email" %}</h4>
+        {{ sponsor.manager_email }}
+    </div>
+    <hr>
+    <div>
+        <h4>{% trans "Business registration number" %}</h4>
+        {{ sponsor.business_registration_number }}
+    </div>
+    <hr>
+    <div>
+        <h4>{% trans "Sponsor url" %}</h4>
+        {{ sponsor.url|default_if_none:"<br>" }}
+    </div>
+    <hr>
+    <div>
+        <h4>{% trans "Sponsor logo image" %}</h4>
+        {% if sponsor.logo_image %}
+            <div style="display: flex; justify-content: center">
+                <img src="{{ sponsor.logo_image.url }}" alt="{{ sponsor.name }}" width="50%">
+            </div>
+        {% endif %}
+    </div>
+    <div class="a_btn_container">
+        <a class="a_btn" href="{% url 'sponsor_proposal_edit' %}?go_proposal=1">{% trans "수정하기" %}</a>
+        {% if not sponsor.submitted %}
+            <a class="a_btn" href="{% url 'sponsor_proposal_detail' %}?submit=1">{% trans "제출하기" %}</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

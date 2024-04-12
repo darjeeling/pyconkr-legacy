@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load thumbnail %}
+{% load crispy_forms_tags %}
+
+{% block head-title %}{{ sprint.title }} &mdash; {{ block.super }}{% endblock %}
+{% block og-title %}{{ sprint.title }}{% endblock %}
+{% block og-desc %}{{ sprint.project_brief }}{% endblock %}
+
+{% block title %}
+<h1>
+    {{ sprint.title }}
+    {% if sprint.user == request.user %}
+    <a href="{% url 'sprint-proposal-update' %}" class="btn btn-primary">
+        <i class="fa fa-pencil-square-o"></i> {% trans "Edit" %}
+    </a>
+    {% endif %}
+</h1>
+{% endblock %}
+{% block content %}
+<div class="row proposal-detail">
+    <h3>{% trans "Sprinter" %}</h3>
+    <h4>
+        {{ sprint.user.profile.name }}
+        {% if sprint.user.profile.organization %}
+            <small>{{ sprint.user.profile.organization }}</small>
+        {% endif %}
+    </h4>
+    <div>
+        {{ sprint.user.profile.bio|safe }}
+    </div>
+    <hr>
+    <div>
+        <h3>{% trans "Tutorial Information" %}</h3>
+        {{ sprint.comment|safe }}
+    </div>
+    <hr>
+    <div>
+        <h3>{% trans "Sprint Language" %}</h3>
+        <div>{{ sprint.language|linebreaks }}</div>
+        <h3>{% trans "Project brief" %}</h3>
+        <div>{{ sprint.project_brief|linebreaks }}</div>
+    </div>
+    <hr>
+    <hr>
+    <div>
+        <h3>{% trans "Project URL" %}</h3>
+        <div>{{ sprint.project_url|linebreaks }}</div>
+    </div>
+    <hr>
+</div>
+<br>
+<a href="{% url "tutorials" %}" class="btn btn-default">
+    <span class="glyphicon glyphicon-chevron-left"></span> {% trans "Back to list" %}
+</a>
+<hr>
+{% endblock %}

@@ -1,0 +1,33 @@
+{
+  "constant": {
+    "DATE_IN_WORDS": "{dateDto, date, short}"
+  },
+  "common": {
+    "is": "이/가",
+    "goTo": "",
+    "apply": "신청하기",
+    "detailedSchedule": "상세 일정",
+    "pastSchedule": "지난 일정",
+    "recommend": "추천하기"
+  },
+  "contribute": {
+    "recommendKeynoteSpeaker": {
+      "title": "키노트 연사 추천하기"
+    },
+    "talkProposal": {
+      "title": "발표 제안하기"
+    },
+    "proposalReview": {
+      "title": "발표 제안 검토하기"
+    },
+    "tutorial": {
+      "title": "튜토리얼 제안하기"
+    }
+  },
+
+  "sponsor": {
+    "event": {
+      "invitation": "후원사 신청"
+    }
+  }
+}

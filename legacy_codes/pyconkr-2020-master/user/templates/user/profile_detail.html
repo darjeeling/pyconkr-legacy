@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load thumbnail %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="row profile-detail margin-top-40">
+    {% if profile.name %}
+        <div class="row">
+            <div class="col-md-2">
+                {% if profile.image_ori %}
+                    <img src="{{ profile.image_ori.url }}" width="100">
+                {% else %}
+                    <img src="{% static 'image/pycon_profile.png' %}" width="100">
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <h4>
+                    {{ profile.name }}
+                    <a href="{% url 'profile_edit' %}"><i class="fa fa-pencil-square-o"></i></a>
+                </h4>
+
+                {% if profile.organization %}
+                  <h5>{{ profile.organization }}</h5>
+                {% endif %}
+                {% if profile.phone %}
+                  <p>{{ profile.phone }}</p>
+                {% endif %}
+                {% if profile.bio %}
+                    <div>{{ profile.bio|safe }}</div>
+                {% endif %}
+                <div style="margin-top: 40px;">User code : {{ profile.user_code|default:user_code_default }}</div>
+            </div>
+        </div>
+
+        {% if proposals %}
+            <h3>{% trans '발표 제안 내역' %}</h3>
+            <div>
+                <ul class="list-group">
+                {% for proposal in proposals %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{% url 'proposal' proposal.id %}">
+                        {% if proposal.accepted %}
+                            [{% trans '발표 확정' %}]
+                        {% endif %}
+                        {{ proposal.title }}
+                        {% if proposal.accepted and proposal.video_url %}
+                            <a href="{{ proposal.video_url }}" target="_blank">
+                                <span class="badge badge-primary badge-pill">{% trans '발표 영상 확인하기' %}</span>
+                            </a>
+                        {% endif %}
+                    </a>
+                </li>
+            {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        {% if sponsors %}
+        <h3>{% trans '후원사 신청 내역' %}</h3>
+        <div>
+            <ul class="list-group">
+            {% for sponsor in sponsors %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{% url 'sponsor_proposal_detail' %}">
+                        {% if sponsor.paid_at is not None %}
+                            [{% trans '스폰서 확정' %}]
+                        {% elif sponsor.submitted %}
+                            [{% trans '신청서 제출' %}]
+                        {% else %}
+                            [{% trans '임시 저장' %}]
+                        {% endif %}
+                        {{ sponsor.name }}({{ sponsor.level.name }})
+                    </a>
+                    <a href="{% url 'sponsor_proposal_edit' %}?go_proposal=1">
+                        <span class="badge badge-primary badge-pill">{% trans '수정하기' %}</span>
+                    </a>
+                    {% if sponsor.paid_at is not None %}
+                        <a href="{% url 'virtual_booth_update' slug=sponsor.slug %}">
+                            <span class="badge badge-primary badge-pill">{% trans 'Virtual booth 수정하기' %}</span>
+                        </a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+    {% if ticket %}
+        <h3>{% trans 'My Ticket' %}</h3>
+            {% include 'registration/my_ticket.html' with profile=profile %}
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

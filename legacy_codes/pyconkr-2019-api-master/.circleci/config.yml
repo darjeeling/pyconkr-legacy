@@ -1,0 +1,86 @@
+version: 2.1
+orbs:
+  aws-ecr: circleci/aws-ecr@0.0.2
+  aws-ecs: circleci/aws-ecs@0.0.8
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.3
+      - image: circleci/postgres:9.6.9-alpine
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "requirements.txt" }}
+            - v1-dependencies-
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+      - run:
+          name: pylint
+          command: |
+            . venv/bin/activate
+            pylint pyconkr api ticket notice
+      - run:
+          name: run tests
+          command: |
+            . venv/bin/activate
+            coverage run ./manage.py test
+            codecov
+
+      - store_test_results:
+          path: test-reports
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - aws-ecr/build_and_push_image:
+          context: AWS_DEPLOY
+          account-url: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
+          repo: "pyconkr-2019/backend"
+          region: ${AWS_DEFAULT_REGION}
+          tag: "${CIRCLE_SHA1}"
+          filters:
+            branches:
+              only:
+                - develop
+                - master
+      - aws-ecs/deploy-service-update:
+          context: AWS_DEPLOY
+          requires:
+            - build
+            - aws-ecr/build_and_push_image
+          aws-region: ${AWS_DEFAULT_REGION}
+          family: "pyconkr-2019-api-dev-task"
+          cluster-name: "pyconkr-dev"
+          service-name: "pyconkr-2019-api-dev"
+          container-image-name-updates: "container=pyconkr-2019-api,tag=${CIRCLE_SHA1}"
+          verify-revision-is-deployed: true
+          filters:
+            branches:
+              only:
+                - develop
+      - aws-ecs/deploy-service-update:
+          context: AWS_DEPLOY
+          requires:
+            - build
+            - aws-ecr/build_and_push_image
+          aws-region: ${AWS_DEFAULT_REGION}
+          family: "pyconkr-2019-api-task"
+          cluster-name: "pyconkr-2019"
+          service-name: "pyconkr-2019-api"
+          container-image-name-updates: "container=pyconkr-2019-api,tag=${CIRCLE_SHA1}"
+          verify-revision-is-deployed: true
+          filters:
+            branches:
+              only:
+                - master

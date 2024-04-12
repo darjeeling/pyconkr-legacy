@@ -1,0 +1,84 @@
+{
+  "executionRoleArn": "arn:aws:iam::518013201776:role/ecsTaskExecutionRole",
+  "containerDefinitions": [{
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "secretOptions": null,
+      "options": {
+        "awslogs-group": "/ecs/pyconkr",
+        "awslogs-region": "ap-northeast-2",
+        "awslogs-stream-prefix": "ecs"
+      }
+    },
+    "portMappings": [{
+      "hostPort": 8000,
+      "protocol": "tcp",
+      "containerPort": 8000
+    }],
+    "environment": [{
+      "name": "AWS_STORAGE_BUCKET_NAME",
+      "value": "pyconkr"
+    }],
+    "secrets": [{
+        "valueFrom": "PROD_POSTGRES_NAME",
+        "name": "POSTGRES_NAME"
+      },
+      {
+        "valueFrom": "PROD_POSTGRES_HOST",
+        "name": "POSTGRES_HOST"
+      },
+      {
+        "valueFrom": "PROD_POSTGRES_PORT",
+        "name": "POSTGRES_PORT"
+      },
+      {
+        "valueFrom": "PROD_POSTGRES_USER",
+        "name": "POSTGRES_USER"
+      },
+      {
+        "valueFrom": "PROD_POSTGRES_PASSWORD",
+        "name": "POSTGRES_PASSWORD"
+      },
+      {
+        "valueFrom": "PROD_AWS_ACCESS_KEY_ID",
+        "name": "AWS_ACCESS_KEY_ID"
+      },
+      {
+        "valueFrom": "PROD_AWS_SECRET_ACCESS_KEY",
+        "name": "AWS_SECRET_ACCESS_KEY"
+      },
+      {
+        "valueFrom": "EMAIL_HOST_USER",
+        "name": "EMAIL_HOST_USER"
+      },
+      {
+        "valueFrom": "EMAIL_HOST_PASSWORD",
+        "name": "EMAIL_HOST_PASSWORD"
+      },
+      {
+        "valueFrom": "EMAIL_HOST_NO_REPLY",
+        "name": "EMAIL_HOST_NO_REPLY"
+      },
+      {
+        "valueFrom": "EMAIL_HOST_USER_NO_REPLY",
+        "name": "EMAIL_HOST_USER_NO_REPLY"
+      },
+            {
+        "valueFrom": "EMAIL_HOST_PASSWORD_NO_REPLY",
+        "name": "EMAIL_HOST_PASSWORD_NO_REPLY"
+      }
+    ],
+    "essential": true,
+    "memoryReservation": 512,
+    "name": "pyconkr"
+  }],
+  "placementConstraints": [],
+  "memory": "2048",
+  "taskRoleArn": "arn:aws:iam::518013201776:role/ecsTaskExecutionRole",
+  "family": "pyconkr",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "512"
+}

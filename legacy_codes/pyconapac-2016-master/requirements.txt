@@ -1,0 +1,13 @@
+Django==1.9.9
+Pillow
+django-allauth
+django-crispy-forms
+django-jsonfield
+django-modeltranslation
+django-rosetta
+django-summernote
+django-constance
+django-picklefield
+django-dynamic-fixture
+sorl-thumbnail
+django-csv-exports

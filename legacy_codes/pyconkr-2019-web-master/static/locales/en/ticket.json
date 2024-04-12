@@ -1,0 +1,126 @@
+{
+    "buy": "Buy",
+    "pay": "Pay",
+    "agree": "Agree",
+    "ticket": "ticket",
+    "back": "back",
+    "buying": "Buy",
+    "paying": "Pay",
+    "closed": "Closed",
+    "soldout": "Sold Out",
+    "fromStartDate": "From {{startDate}}",
+    "agreeToOptions": "I confirm the goods, the price and the agree to the purchase.",
+    "agreeToTerms": "I agree to the terms above.",
+    "terms": "We promise to participate in the event in a manner that respects each other in accordance with the Code of Conduct. Participation may be restricted if it is determined that there is a serious violation of the Code of Conduct and threats to others, in which case the ticket purchased cannot be refunded.",
+    "error": {
+        "noOptionSelected": "Please select a product option",
+        "notAgreeToOptions": "Please agree to the purchase",
+        "notAgreeToTerms": "Please agree to the terms"
+    },
+    "common": {
+        "refundWarning": "Do you want to refund ticket?",
+        "refundSuccess": "The ticket was successfully refunded.",
+        "list": "List of tickets",
+        "noTicketAlert": "Ticket list has not been released yet.🙇‍♀️ 🙇‍♂️",
+        "shouldBuyConference": "ChildCare/Youngcoder is for participants who have purchased a conference ticket. A list of programs is available to participants who have purchased conference tickets.🤓"
+    },
+    "purchased": "Purchased",
+    "purchaseNotAvailable": "Not available",
+    "overview": {
+        "pageTitle": "Tickets",
+        "title": "Ticket",
+        "description": "Pycon KR 2019 has various types of tickets including Conference, Tutorial, Youngcoder etc.."
+    },
+    "myTickets": {
+        "headerTitle": "My Ticket :: PyCon Korea 2019",
+        "pageTitle": "My Ticket",
+        "alert": "Canceled tickets are not valid. Therefore, it can not be used for entry.",
+        "desc1": "Check the detail of my purchased/canceled tickets. You can register for the each program by presenting the ticket below at the registration booth.",
+        "desc2": "If you want to transfer a ticket to someone, you can send screenshot of the ticket or ticket number to the person who receives the ticket. If you have been transferred, The recipient can register at the registration booth by presenting it. Note that he/she can not change the name or affiliation of the name tag."
+    },
+    "conference": {
+        "pageTitle": "Conference Ticket",
+        "title": "Conference Ticket",
+        "ticket": "Conference Ticket",
+        "description": "It is the ticket that can enter the two-day conference of the main event of PyCon Korea on 17-18 (Sat-Sun) August.",
+        "alert1": "Conference ticket includes Presentation Session, Sponsor Booth, Lightning Talk, Open Space.",
+        "alert2": "Conference ticket It does not include tutorials, sprints, young coder, and child care.",
+        "general": {
+            "title": "General"
+        },
+        "earlybird": {
+            "title": "Earlybird"
+        },
+        "patron": {
+            "title": "Patron",
+            "minimumPriceWarning": "Patron ticket price can be adjustable with at least {{price}} ₩"
+        },
+        "option": {
+            "tshirtSize": "T-shirt size",
+            "selectTshirtSize": "Select T-shirt size",
+            "tshirtWarning": "The T-shirt size is for reference only and may not be available depending on the situation."
+        }
+    },
+    "tutorial": {
+        "pageTitle": "Tutorial Ticket",
+        "title": "Tutorial Ticket",
+        "description": "Description of Tutorial",
+        "description1": "Tutorial is an educational program for those who are new or beginner to a subject. A tutor and our staffs are waiting for you. Tutorial is recommended for those who are new to python or to programming.",
+        "description2": "A further discussion will be needed in case of tutorials running by a company. We will inform you about details if you contact via program@pycon.kr"
+    },
+    "sprint": {
+        "pageTitle": "Sprint Ticket",
+        "title": "Sprint Ticket",
+        "description": "Description of Sprint",
+        "description1": "Sprint is an event to develop a interesting open-source project intensively. You can meet a new friend, also share an experience and knowledge for each other. Is this your first in sprint? That's fine! It will be the time that you can learn from a person who are experienced to have led a project regarding the topic.",
+        "description2": "Sprints are targeted at open source projects with not only Python also all programming languages."
+    },
+    "youngcoder": {
+        "pageTitle": "Youngcoder Ticket",
+        "title": "Youngcoder Ticket",
+        "description": "Description of Youngcoder",
+        "option" : {
+            "title": "Youngcoder Ticket Option",
+            "name": "Name",
+            "birthDate": "Birth Date"
+        }
+    },
+    "childcare": {
+        "pageTitle": "Childcare Ticket",
+        "title": "Childcare Ticket",
+        "description": "Description of Childcare",
+        "option" : {
+            "title": "Childcare Ticket Option",
+            "name": "Name",
+            "birthDate": "Birth Date",
+            "requireParkingDiscount": "Do you need parking discount(50%) for all day?",
+            "yes": "Yes",
+            "no": "No",
+            "keepInMind": "Please keep in mind",
+            "keepInMindPlaceHolder": "Please let us know everything we should know about your child such as your child has other siblings, allergies, etc."
+        }
+    },
+    "payment": {
+        "pageTitle": "Ticket Payment",
+        "title": "Ticket Payment",
+        "description": "Please fill in the form for proceeding a payment",
+        "paymentInfo": {
+            "title": "Payment Information",
+            "ticketTypeTitle": "Ticket Payment Type",
+            "priceTitle": "Price",
+            "currency": "KRW"
+        },
+        "creditCardInfo": {
+            "title": "Creditcard Information",
+            "creditCardTypeLabel": "Domestic/Foreign Card",
+            "domesticLabel": "Domesitc",
+            "foreignLabel": "Foreign",
+            "cardNumberTitle": "Creditcard Number",
+            "cardNumberPlaceholder": "Without -",
+            "expiryLabel": "Expiry Month/Year",
+            "birthLabel": "Birth Date",
+            "birthPlaceholder": "YYMMDD",
+            "pwd2digitLabel": "Password"
+        }
+    }
+}

@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-27 07:06+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\user\forms.py:36
+msgid "Submit"
+msgstr ""
+
+#: .\user\forms.py:37 .\user\forms.py:113
+#, python-format
+msgid "Maximum size is %(size)d MB"
+msgstr "최대 크기 %(size)d MB"
+
+#: .\user\forms.py:40 .\user\forms.py:123
+#, python-format
+msgid "Minimum dimension is %(width)d x %(height)d"
+msgstr "최소 해상도 %(width)d x %(height)d"
+
+#: .\user\forms.py:52
+msgid "이름 (한글)"
+msgstr ""
+
+#: .\user\forms.py:53
+msgid "이름 (영어)"
+msgstr ""
+
+#: .\user\forms.py:54
+msgid "Photo"
+msgstr "프로필 사진"
+
+#: .\user\forms.py:55
+msgid "홍보성 메일 수신 동의"
+msgstr ""
+
+#: .\user\forms.py:132
+msgid "이메일"
+msgstr ""
+
+#: .\user\forms.py:133
+msgid "파이콘 행사에 관련된 안내 메일을 받을 이메일 주소를 입력해주세요."
+msgstr ""
+
+#: .\user\forms.py:135
+msgid "이름"
+msgstr ""
+
+#: .\user\forms.py:135
+msgid "기입한 이름이 행사 당일 이름표에 표시됩니다."
+msgstr ""
+
+#: .\user\forms.py:137
+msgid "소속"
+msgstr ""
+
+#: .\user\forms.py:137
+msgid ""
+"기입한 조직명이 행사 당일 이름표에 표시됩니다. 필수 입력 사항은 아닙니다."
+msgstr ""
+
+#: .\user\forms.py:151
+msgid "이용 약관에 동의합니다."
+msgstr ""
+
+#: .\user\forms.py:157
+msgid "개인정보 처리방침에 동의합니다."
+msgstr ""
+
+#: .\user\forms.py:163
+msgid "파이콘 한국 행동 강령에 동의합니다."
+msgstr ""
+
+#: .\user\forms.py:184
+msgid "가입하기"
+msgstr ""
+
+#: .\user\models.py:21
+msgid "여기에 기입한 조직 이름이 행사 당일 이름표에 표시됩니다."
+msgstr ""
+
+#: .\user\models.py:23
+msgid "사용자 사진 원본"
+msgstr ""
+
+#: .\user\models.py:25
+msgid "사용자 사진 축소본"
+msgstr ""
+
+#: .\user\models.py:27
+msgid ""
+"이 내용이 개인 후원자 목록에 노출됩니다. 변경 사항은 최대 60분 이내에 적용됩"
+"니다."
+msgstr ""
+
+#: .\user\templates\socialaccount\signup.html:7
+msgid "Signup"
+msgstr ""
+
+#: .\user\templates\socialaccount\signup.html:10
+#, python-format
+msgid ""
+"\n"
+"%(provider_name)s 계정으로 성공적으로 인증을 받았습니다. 계정 인증 시 <b>이름"
+"과 이메일</b>과 같은 공개 정보가 저장됩니다.\n"
+"\n"
+msgstr ""
+
+#: .\user\templates\socialaccount\signup.html:16
+msgid "필수 정보를 입력한 이후 약관 동의를 완료하시면 가입 절차가 완료됩니다.🤖"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:38
+msgid "발표 제안 내역"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:45
+msgid "발표 확정"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:50
+msgid "발표 영상 확인하기"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:61
+msgid "후원사 신청 내역"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:68
+msgid "스폰서 확정"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:70
+msgid "신청서 제출"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:72
+msgid "임시 저장"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:77
+msgid "수정하기"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:81
+msgid "Virtual booth 수정하기"
+msgstr ""
+
+#: .\user\templates\user\profile_detail.html:91
+msgid "My Ticket"
+msgstr "내 티켓"
+
+#: .\user\templates\user\profile_form.html:5 .\user\views.py:40
+msgid "Profile"
+msgstr "프로필"
+
+#: .\user\templates\user\social_signup_form.html:5
+msgid "Social Sign-up"
+msgstr "소셜로그인"
+
+#: .\user\templates\user\staff_list.html:6
+#: .\user\templates\user\staff_list.html:7
+#: .\user\templates\user\staff_list.html:9
+msgid "파이콘 한국 준비위원회"
+msgstr ""
+
+#: .\user\templates\user\staff_list.html:14
+msgid ""
+"파이콘 한국 준비위원회는 2014년 조직되어, 올해 일곱 번째 한국에서의 파이콘 행"
+"사를 준비하고 있습니다."
+msgstr ""
+
+#: .\user\templates\user\staff_list.html:15
+msgid ""
+"준비위원회는 매년 신규 멤버를 모집하는 파이콘을 사랑하는 사람들의 열린 모임입"
+"니다."
+msgstr ""
+
+#: .\user\templates\user\staff_list.html:18
+msgid "준비위원회 명단 (가나다 순)"
+msgstr ""
+
+#: .\user\templates\user\staff_list.html:19
+msgid "파이콘 한국 2020는 다음과 같은 사람들이 준비하고 있습니다."
+msgstr ""
+
+#: .\user\templates\user\staff_list.html:53
+msgid "문의"
+msgstr ""
+
+#: .\user\views.py:30
+msgid "프로필을 수정해주세요."
+msgstr ""
+
+#: .\user\views.py:55
+msgid "Profile successfully updated."
+msgstr "프로필이 성공적으로 업데이트 되었습니다."
+
+#: .\user\views.py:67
+msgid "Update profile"
+msgstr "프로필 수정"

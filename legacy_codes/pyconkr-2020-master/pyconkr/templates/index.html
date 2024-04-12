@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head-include %}
+<script src="{% static 'js/teaser.js' %}"></script>
+{% endblock %}
+
+{% block content_wrapper %}
+{% endblock %}
+
+{% block content %}
+
+<div class="quick_btns_container">
+    <div class="quick_btns">
+        <a class="quick_btn" href="{% url 'talk-schedule' %}">
+            {% if live %}<div class="live_alert">{% trans 'LIVE 진행 중' %}</div>{% endif %}
+            <span>📅 {% trans '세션 시간표' %}</span>
+        </a>
+        <a class="quick_btn" href="https://www.youtube.com/channel/UC26x6D5xpKx6io4ShfXa_Ow/" target="_blank">
+            {% if live %}<div class="live_alert">{% trans 'LIVE 진행 중' %}</div>{% endif %}
+            <span>📺 {% trans '파이콘 한국 유튜브' %}</span>
+        </a>
+        <a class="quick_btn" href="{% url 'virtual_booth_home' %}"><span>🎪 Virtual Booth</span></a>
+        <a class="quick_btn" href="{% url 'ticket' %}"><span>📋 {% trans '참가자 등록' %}</span></a>
+        <a class="quick_btn" href="{% url 'ticket' %}#patron"><span>🌱 {% trans '개인 후원' %}</span></a>
+    </div>
+</div>
+
+{% if recent_announcements %}
+<section class="box-section">
+    <h3>{% trans "공지 사항" %}</h3>
+    {% for announcement in recent_announcements %}
+        {% if announcement.active %}
+            <li><a href="{{ announcement.url }}" target="_blank">{{ announcement.title|safe }}</a></li>
+        {% endif %}
+    {% endfor %}
+</section>
+{% endif %}
+
+<section class="box-section">
+  <h3>{% trans "행사 상세" %}</h3>
+  <p>
+    {% trans "파이콘 한국은 한국의 파이썬 개발자들이 지식을 공유하고 만남을 갖기 위한 장입니다." %}<br>
+    {% trans "파이콘 한국 2020은 온라인으로 진행됩니다." %}<br><br>
+
+    <h4>{% trans "Conference" %}</h4>
+    <div>{% trans '파이썬 사용 사례, 지식 공유를 위한 행사입니다.<br> 컨퍼런스의 자세한 시간표는 <a href="/2020/program/talk-schedule/">프로그램 > 세부 일정</a>에서 확인하실 수 있습니다.' %}</div>
+    <div>{% trans "파이썬 사용 사례와 지식을 공유하는 40여 개의 다양한 발표 세션이 열립니다." %}</div>
+
+    {% trans "이외의 모든 공지 사항은 공식 " %}
+    <a href="https://www.facebook.com/pyconkorea/" target="_blank">{% trans "페이스북" %}</a>{% trans "과 " %}
+    <a href="https://twitter.com/PyConKR" target="_blank">{% trans "트위터" %}</a>{% trans ", 이곳을 통해 공지될 예정입니다." %}
+  </p>
+</section>
+
+<section class="box-section">
+  <h3>{% trans "Slogan" %}</h3>
+  <p>"We are Pythonistas"</p>
+  <p>
+    <div>{% trans "이 곳에는 '파이썬'이라는 단 하나의 공통점으로 모이는 사람들이 있습니다." %}</div><br>
+    <div>{% trans "이제 막 파이썬이 무엇인지 알게 된 사람들," %}</div>
+    <div>{% trans "파이썬으로 무언가를 만들고 연구하며 세상에 기여하고 있는 사람들," %}</div>
+    <div>{% trans "다른 이에게 파이썬을 더 널리 알리고 싶은 사람들까지." %}</div><br>
+    <div>{% trans "이렇게 다양한 사람들이 모여있는 파이콘 한국에서" %}</div>
+    <div>{% trans "우리는 서로의 경험담에 응원을 보내고, 울고 웃으며 많은 이야기를 나눕니다." %}</div>
+    <div>{% trans "그렇게 파이콘 한국은 점점 깊어지고, 넓어지고, 단단해졌습니다." %}</div><br>
+    <div>{% trans "올해도 어김없이 열릴 파이콘 한국을 통해<br>여러분의 세상이 한 발자국 더 넓어질 수 있기를 바랍니다." %}</div><br>
+    <div>{% trans "이곳에 모인 우리는 함께 걸어갈 수 있는 힘을 가진 파이써니스타들이니까요." %}</div>
+    <div>{% trans "We are Pythonistas." %}</div>
+  </p>
+</section>
+
+<section class="box-section">
+  <h3>{% trans "문의 & 공식 계정" %}</h3>
+  <p>{% trans "파이콘 한국 2020에 대한 모든 문의는 아래의 공식 연락처로 주시기 바랍니다." %}</p>
+  <p><b>{% trans "Email" %}</b> <a href="mailto:pyconkr@pycon.kr">pyconkr@pycon.kr</a></p>
+  <p><b>{% trans "페이스북" %}</b> <a href="https://www.facebook.com/pyconkorea/">https://www.facebook.com/pyconkorea/</a></p>
+  <p><b>{% trans "Sponsor" %}</b> <a href="mailto:sponsor@pycon.kr">sponsor@pycon.kr</a></p>
+</section>
+{% endblock %}

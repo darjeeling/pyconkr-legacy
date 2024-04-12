@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-09 17:29+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: woojing seok <woojing@pycon.kr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: registration/forms.py:11 registration/forms.py:64
+msgid "Base Price KRW"
+msgstr "기본 금액"
+
+#: registration/forms.py:21 registration/forms.py:75
+msgid "Submit"
+msgstr "결제하기"
+
+#: registration/forms.py:27 registration/forms.py:51
+#: registration/templates/registration/status.html:16
+#: registration/templates/registration/status.html:90
+msgid "Name"
+msgstr "이름"
+
+#: registration/forms.py:28 registration/forms.py:52
+#: registration/templates/registration/status.html:49
+msgid "Option"
+msgstr "옵션"
+
+#: registration/forms.py:29 registration/forms.py:53
+#: registration/templates/registration/status.html:27
+#: registration/templates/registration/status.html:32
+msgid "Top Size"
+msgstr "상의 사이즈"
+
+#: registration/forms.py:30 registration/forms.py:55
+msgid "E-Mail"
+msgstr "이메일"
+
+#: registration/forms.py:31 registration/forms.py:56
+#: registration/templates/registration/status.html:41
+msgid "Company or Organization"
+msgstr "소속"
+
+#: registration/forms.py:32 registration/forms.py:57
+msgid "Phone Number"
+msgstr "전화번호"
+
+#: registration/forms.py:33 registration/forms.py:58 registration/forms.py:83
+msgid "Payment Method"
+msgstr "결제수단"
+
+#: registration/forms.py:54
+msgid "Additional Funding KRW"
+msgstr "추가 후원 금액"
+
+#: registration/forms.py:81
+msgid "Title"
+msgstr ""
+
+#: registration/forms.py:82
+#, fuzzy
+#| msgid "E-mail"
+msgid "Email"
+msgstr "이메일"
+
+#: registration/models.py:137
+msgid "Credit Card only for Korean"
+msgstr ""
+
+#: registration/models.py:138
+msgid "Credit Card for Foreign"
+msgstr ""
+
+#: registration/templates/registration/manual_payment.html:6
+msgid "Manual Payment"
+msgstr ""
+
+#: registration/templates/registration/payment.html:28
+#: registration/templates/registration/status.html:143
+#: registration/views.py:110 registration/views.py:359
+msgid "Registration"
+msgstr "등록"
+
+#: registration/templates/registration/registration_detail.html:14
+msgid "PyCon Korea 2018"
+msgstr ""
+
+#: registration/templates/registration/status.html:7
+msgid "Registration status"
+msgstr "등록 상태"
+
+#: registration/templates/registration/status.html:9
+msgid "Registration is completed"
+msgstr "등록 완료"
+
+#: registration/templates/registration/status.html:11
+msgid "Your registration is completed without any problems"
+msgstr "등록되었습니다"
+
+#: registration/templates/registration/status.html:20
+#: registration/templates/registration/status.html:94
+msgid "E-mail"
+msgstr "이메일"
+
+#: registration/templates/registration/status.html:45
+msgid "Phone number"
+msgstr "전화번호"
+
+#: registration/templates/registration/status.html:53
+#: registration/templates/registration/status.html:98
+msgid "Price"
+msgstr "금액"
+
+#: registration/templates/registration/status.html:58
+#: registration/templates/registration/status.html:103
+msgid "Additional Funding"
+msgstr "추가 후원 금액"
+
+#: registration/templates/registration/status.html:63
+#: registration/templates/registration/status.html:108
+msgid "Transaction ID"
+msgstr ""
+
+#: registration/templates/registration/status.html:67
+msgid "Registration datetime"
+msgstr "등록 일시"
+
+#: registration/templates/registration/status.html:71
+msgid "Cancelable Date"
+msgstr "환불 가능 기한"
+
+#: registration/templates/registration/status.html:83
+msgid "Check Registration Receipt"
+msgstr "등록 영수증 확인"
+
+#: registration/templates/registration/status.html:87
+msgid "Payment Information"
+msgstr "결제 정보"
+
+#: registration/templates/registration/status.html:112
+msgid "Bank to transfer"
+msgstr "이체할 은행"
+
+#: registration/templates/registration/status.html:116
+msgid "Account number to transafer"
+msgstr "이체할 계좌 번호"
+
+#: registration/templates/registration/status.html:120
+#, fuzzy
+#| msgid "Account number to transafer"
+msgid "Account owner name"
+msgstr "이체할 계좌 번호"
+
+#: registration/templates/registration/status.html:124
+msgid "Payment deadline"
+msgstr "결제 기한"
+
+#: registration/templates/registration/status.html:128
+msgid "Payment check"
+msgstr "결제 확인"
+
+#: registration/templates/registration/status.html:131
+msgid "Not checked yet"
+msgstr "아직 확인되지 않음"
+
+#: registration/templates/registration/status.html:133
+msgid "Payment checked"
+msgstr "결제 확인됨"
+
+#: registration/templates/registration/status.html:140
+msgid "There is no registration record"
+msgstr "등록 기록이 없습니다"
+
+#: registration/views.py:55
+msgid "Registration Status"
+msgstr "등록 상태"
+
+#: registration/views.py:450
+msgid "Registration Receipt"
+msgstr "등록 영수증"
+
+#: registration/views.py:469
+msgid "Issue Ticket System"
+msgstr ""
+
+#: registration/views.py:486
+msgid "Ticket Print"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Bank to transfer"
+#~ msgid "Virtual Bank Transfer"
+#~ msgstr "이체할 은행"

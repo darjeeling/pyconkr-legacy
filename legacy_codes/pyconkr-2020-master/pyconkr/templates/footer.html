@@ -1,0 +1,41 @@
+{% load staticfiles %}
+{% load i18n %}
+
+
+
+<footer class="text-center">
+    <button id="to-top-btn" onclick="toTopFunc()" title="TOP"><span>TOP</span></button>
+    <div class="container">
+        <h3>We are Pythonistas, {% trans "PyCon Korea 2020" %}</h3>
+        <p>{% trans "PyCon Korea 2020 is a product of PyCon Korea Organizing Team." %}</p>
+        <p>
+            {% trans "Powered by Django" %}
+        </p>
+        <p style="">
+            {% trans "서비스 이용 약관" %}
+            <span>|</span>
+            {% trans "개인정보 처리 방침" %}
+            <span>|</span>
+            <a href="{% url 'subscribe' %}">{% trans "소식 받아보기" %}</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+{# for button to top #}
+    btn = document.getElementById("to-top-btn");
+    const scrollFunc = () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            btn.style.display = "flex";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    window.onscroll = () => {scrollFunc()};
+
+    const toTopFunc = () => {
+        document.body.scrollTop = 0;  {# For Safari #}
+        document.documentElement.scrollTop = 0;  {# For Chrome, Firefox, IE #}
+    }
+</script>

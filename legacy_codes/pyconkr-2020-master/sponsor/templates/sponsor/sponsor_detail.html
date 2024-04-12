@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block head-title %}{{ block.super }} {% trans "Sponsor" %} | {{ sponsor.name }}{% endblock %}
+{% block og-title %}{{ block.super }} {% trans "Sponsor" %} | {{ sponsor.name }}{% endblock %}
+{% block title %}{{ sponsor.name }}{% endblock %}
+
+{% block content %}
+<div class="sponsor">
+    <img src="{{ sponsor.logo_image.url }}" alt="{{ sponsor.name }}">
+    <ul class="list-group">
+        <li class="list-group-item">
+        <span class="glyphicon glyphicon-tag"></span> {{ sponsor.level }}
+        </li>
+        <li class="list-group-item">
+        <span class="glyphicon glyphicon-share-alt"></span> {{ sponsor.url|urlize }}
+        </li>
+    </ul>
+    <div>
+        {% autoescape off %}
+            {{ sponsor.desc|default_if_none:"<br>" }}
+        {% endautoescape %}
+    </div>
+    {% if EDITABLE %}
+        <div class="a_btn_container">
+            <a class="a_btn" href="{% url 'sponsor_proposal_edit' %}?go_proposal=0">{% trans "수정하기" %}</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

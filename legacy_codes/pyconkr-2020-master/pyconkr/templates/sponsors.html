@@ -1,0 +1,23 @@
+{% load i18n %}
+<div class="sponsors">
+{% if paid_levels %}
+    {% for lvl in levels %}
+        {% if lvl in paid_levels %}
+        <h3>{{ lvl.name }}</h3>
+        <ul>
+            {% for sponsor in lvl.sponsor_set.all %}
+                {% if sponsor.logo_image and sponsor.paid_at is not None %}
+                    <li class="sponsor-{{ lvl.order }}">
+                        <a href="{% url "sponsor_detail" slug=sponsor.slug %}">
+                            <img src="{{ sponsor.logo_image.url }}" alt="{{ sponsor.name }}">
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endfor %}
+{% else %}
+    <h4 class="text-center">{% trans "Ready for content" %}</h4>
+{% endif %}
+</div>

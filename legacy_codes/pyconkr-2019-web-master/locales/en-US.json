@@ -1,0 +1,922 @@
+{
+  "constant":{
+    "DATE_IN_WORDS": "{dateDto, date, short}",
+    "pyconKorea": {
+      "name": "PyCon Korea 2019",
+      "nameOnly": "PyCon Korea",
+      "schedule": "2019.08.15(Thu)-18(Sun)",
+      "scheduleWithNameAndVenue": "PyCon Korea 2019: 8.15(Thu)-18(Sun), Coex Grand Ballroom",
+      "venue": "Coex Grand Ballroom, Seoul",
+      "earlybirdTicketOpen": "Earlybird Ticket Open",
+      "generalTicketOpen": "General Ticket Open",
+      "TutorialTicketOpen": "Tutorial Ticket Open",
+      "SprintTicketOpen": "Sprint Ticket Open",
+      "sprint": {
+        "name": "Sprint",
+        "schedule": "August 15-16",
+        "dayofweek": "Thu-Fri"
+      },
+      "tutorial": {
+        "name": "Tutorial",
+        "schedule": "August 15-16",
+        "dayofweek": "Thu-Fri"
+      },
+      "conference": {
+        "name": "Conference",
+        "schedule": "August 17-18",
+        "dayofweek": "Sat-Sun"
+      }
+    },
+    "sponsor": "🧚‍ Sponsor 🧚‍"
+  },
+  "common": {
+    "contact": "Contact",
+    "maximum": "Maximum",
+    "schedule": "Schedule",
+    "tableOfContents": "Table Of Contents",
+    "unit": {
+      "ea": "{number} EA",
+      "krw": "{number} KRW",
+      "minimumKrw": "Minimum {number} KRW"
+    },
+    "alert": "Please be sure to read the guide before creating a proposal.",
+    "is": "is",
+    "goTo": "Go to",
+    "detailedSchedule": "Detailed schedule",
+    "pastSchedule": "Past Schedule",
+    "apply": "apply",
+    "recommend": "recommend",
+    "status": {
+      "onProgress": "On Progress",
+      "preparing": "Preparing",
+      "openBefore": "Open D-{diff}",
+      "openToday": "Open Soon Today",
+      "closeAfter": "Close D-{diff}",
+      "closed": "Closed",
+      "untilSelected": "Until Selected",
+      "conferenceDays": "Conference Days"
+    },
+    "uploadTitle": "Upload",
+    "more": "More"
+  },
+  "gnb": {
+    "home": "Home",
+    "help": {
+      "root": "Support",
+      "faq": "FAQ",
+      "notice": "Notice",
+      "venue": "Venue",
+      "financialAid": "Financial Aid",
+      "childcare": "Child Care",
+      "visaSponsing": "Visa Sponsing"
+    },
+    "program": {
+      "root": "Program",
+      "talks": "List of talks",
+      "keynote": "Keynote",
+      "lightningTalk": "Lightning Talk",
+      "openSpaceTalk": "Open Space",
+      "tutorial": "Tutorial",
+      "sprint": "Sprint",
+      "youngcoder": "Youngcoder",
+      "openlunch": "Open Lunch"
+    },
+    "timetable": {
+      "root": "Timetable",
+      "talks": "Conference",
+      "lightningTalk": "Lightning Talk",
+      "tutorial": "Tutorial",
+      "sprint": "Sprint"
+    },
+    "contribute": {
+      "root": "Contribution",
+      "overview": "About Contribution",
+      "cfpDetailedGuide": "How to submit proposal",
+      "proposingATalk": "Proposing a talk",
+      "proposingATutorial": "Proposing a tutorial",
+      "recommendKeynoteSpeaker": "Recommending Keynote",
+      "proposalReview": "Review Talk Proposals",
+      "volunteer": "Volunteer",
+      "staff": "Pycon Korea Organizing Team"
+    },
+    "sponsor": {
+      "root": "Sponsor",
+      "prospectus": "Sponsor Prospectus",
+      "invitation": "Sponsor Invitation",
+      "patron": "Patrons"
+    },
+    "info": {
+      "login": "Login",
+      "logout": "Logout",
+      "root": "My Info",
+      "history": "Proposal/Sponsor History",
+      "profile": "My Profile"
+    },
+    "ticket": {
+      "overview": "Overview",
+      "myTickets": "My Tickets",
+      "conference": "Conference",
+      "tutorial": "Tutorial",
+      "sprint": "Sprint",
+      "youngcoder": "Youngcoder",
+      "childcare": "Childcare"
+    }
+  },
+  "account": {
+    "profile": {
+      "pageTitle": "Profile :: PyCon Korea 2019",
+      "header": "Profile",
+      "item1": "Profile Picture",
+      "button1": "Upload",
+      "item2": "Email",
+      "item3": "Name in Korean",
+      "item4": "Name in English",
+      "item5": "Phone Number",
+      "item6": "Affiliation",
+      "item7": "Nationality",
+      "item8": "Bio in Korean",
+      "item9": "Bio in English",
+      "button2": "Update Profile",
+      "alert1": "The profile has been updated"
+    }
+  },
+  "login": {
+    "needToLogin": {
+      "title": "Login is required",
+      "desc": "Please sign in with your PyCon.KR account."
+    },
+    "title": "Login",
+    "githubButton": "Login with Github Account",
+    "facebookButton": "Login with Facebook Account"
+  },
+  "contribution": {
+    "pageTitle": "Proposal/Sponsor History :: PyCon Korea 2019",
+    "title": "Proposal/Sponsor History",
+    "paragraph": "It is the contents which you submitted or applied to PyCon Korea 2019.",
+    "emptyAlert": "There are no proposals and application details.",
+    "emptyDescription": "Take a look at the program you are recruiting from the contribution page."
+  },
+  "home": {
+    "sprintDescription": "Sprints are intensive development session on an open source project of your choice, in a team environment. It's a time to come together with colleagues, old and new, to share what you've learned and apply it to an open source project. Is this your first time joining in Sprints? No problem! It will be the time that you learn directly from the open source contributors. Sprint sessions are not just limited to the projects using Python, all languages are welcome!",
+    "tutorialDescription": "Tutorials are educational programs for beginners, or challengers for new era. Tutorial mentors and tutors will guide you to easy way of learning. We recommend tutorials for beginner programmers or Python strangers.",
+    "conferenceDescription": "There are over 50 different presentation sessions that share knowledge and use of Python use cases. In addition, various events such as sponsored company booth, young coder, lightning talk, open space are available. You can participate in the event and interact with various participants.",
+    "sponsor": {
+      "title": "Looking for sponsors for PyCon Korea 2019",
+      "description1": "Thanks to all the sponsors who supported the importance of open source and Python community, we could organize an event that more programmers can attend by providing many speech sessions, side programs, video recordings and financial aid.",
+      "description2": "We are currently looking for the official sponsors for PyCon Korea 2019 who are interested in supporting the growth of Python community. ",
+      "prospectus": "Schedule & Prospectus"
+    },
+    "notice": {
+      "title": "🎉 Early bird ticket schedule",
+      "description1": "Hello, pythonista!<br/>We will be open early bird ticket schedule for PyCon Korea 2019.<br/>Don't miss out on the early bird tickets in Korea that will always be sold out in a hurry!<br/><br/>⭐ Early bird tickets open: Monday, June 10, 19:00 2019 KST (UTC + 9)<br/>⭐ EARLY BIRD TICKET PRICE: 50,000 KRW<br/><br/>P.S. 200 additional open!"
+    },
+    "pyconKoreaTitle": "About PyCon Korea",
+    "pyconKoreaDescription": "PyCon is a non-commercial conference held by Python Programming Communities over the world. PyCon Korea has been successfully hold in several years with a group of volunteers called ‘PyCon Korea Preparation Organizers’, who support the local Korean Python community.",
+    "sloganDescription1": "The slogan of PyCon Korea 2019 is \"Connect the Pythonistas\".",
+    "sloganDescription2": "PyCon can be a place where Python users meet, or a place that connects with other languages or communities. In PyCon, you can meet someone who is researching deeply on one thing, another Pythonista from a different field, or a friend of yours.",
+    "sloganDescription3": "With PyCon, we want all the Pythonistas who are in different fields and heading to different directions to get together and become an awesome constellation. See you again at PyCon Korea 2019.",
+    "differenceWithOthers": {
+      "title": "What's the difference between PyCon and other developer's conferences?",
+      "description": "PyCon Korea is a non-profitable, developer-oriented event organized by community members, and has different characteristics from conferences organized companies or organizations. All attendees, including speakers, tutorial hosts, voluntary workers, and organizers, participate in PyCon Korea without any profitable purpose, and only to broaden the usage of Python, an open source programming language, and activate its community."
+    }
+  },
+  "contribute": {
+    "overview": {
+      "pageTitle": "About contribution :: PyCon Korea 2019",
+      "title": "Various ways to contribute to PyCon Korea",
+      "intro": "You can contribute to PyCon Korea in various ways including keynote, speaker, tutorial, sprint, volunteer and lightning talk. We will recruit each item with the following schedule.",
+      "table": {
+        "keynote": "Recommending Keynote Speaker",
+        "talk":"Proposing a Talk",
+        "openReview":"Open Review",
+        "sponsor":"Proposing Sponsorship",
+        "tutorial":"Proposing a Tutorial",
+        "sprint": "Proposing a Sprint",
+        "volunteer":"Recruiting Volunteer",
+        "lightingtalk":"Proposing a Lighting Talk",
+        "moreDetail": "More detail"
+      }
+    },
+    "proposalReview": {
+      "title": "Review Presentation Proposals",
+      "notOpenYet": "Open review period have not started yet.",
+      "startReview": "Start review👩‍💻👨‍💻",
+      "reviewProposals": "Review proposals"
+    },
+    "recommendKeynoteSpeaker": {
+      "pageTitle": "Recommending Keynote Speaker :: PyCon Korea 2019",
+      "title": "Recommending Keynote Speaker",
+      "description1": "We are looking for PyCon Korea 2019 Keynote Speaker to be the Polaris of Pythonistas.",
+      "description2": "If you know someone who is actively using Python for life/work/hobbies, please do not hesitate to recommend it.",
+      "recommendButton": "Recommendation Form",
+      "schedule": {
+        "open": "Recommendation Open",
+        "deadline": "Recommendation Deadline"
+      }
+    },
+    "cfpGuide": {
+      "pageTitle": "How to submit proposal :: PyCon Korea 2019",
+      "title": "How to submit proposal",
+      "intro": "This page has written to provide detailed information for speakers of PyCon Korea. Below information and suggestion will guide your presentation to be more informative and persuasive to audience in PyCon Korea.",
+      "notice": {
+        "title": "Guide for Speakers",
+        "record": {
+          "title": "Session recording",
+          "content": "All session of PyCon Korea will be recorded and open to public after conference. Please consider this before you submit your proposal."
+        },
+        "pays": {
+          "title": "Everybody Pays",
+          "content": "PyCon is Python community's voluntary event. Please understand we are not able to provide all the material expense supports (pay, expenses, free tickets) to our speakers. Regards on this matter, please visit page explains about PyCon’s main value and philosophy <a href=\"http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays\"> \"Everybody Pays\" </a>."
+        },
+        "vote": {
+          "title": "Voting preference",
+          "content": "Also, first screened proposal will be voted by early bird ticket holders. The purpose of this vote is to find out preference and interest of sessions and rate those voted proposals. Program team will select final speakers based on preference vote to make this event more fun and enjoyable to as many audience as possible."
+        },
+        "communication": {
+          "title": "Continuing communication",
+          "content": "For the last, please understand the moment you submit your proposal and till it get selected, there will be continuing communication with program team. We recommend you to submit your proposal earlier before its deadline to communicate with program team to build your talk session more fun and informative."
+        },
+        "conclusion": "If you’re all familiar with guidance now, are you ready to start your proposal?"
+      },
+      "beforeProposal": {
+        "title": "Before you start to fill your proposal",
+        "consider": {
+          "description": "There are a few things to consider before working on proposal.",
+          "item1": "What is your main topic? What would you like to talk about?",
+          "item2": "Who is your target audience?",
+          "item3": "What can your audience get from your talk?",
+          "item4": "How would you manage time in your session?"
+        },
+        "information": {
+          "description": "Also, below information must be included in your proposal.",
+          "header": {
+            "item": "Item",
+            "description": "Description",
+            "visibility": "Visibility at the time of vote"
+          },
+          "item":{
+            "title": {
+              "title": "Title"
+            },
+            "category": {
+              "title": "Category",
+              "desc": "You can see the list of categories on the proposal page."
+            },
+            "summary": {
+              "title": "Summary of your talk"
+            },
+            "detail": {
+              "title": "Details of your talk "
+            },
+            "audience": {
+              "title": "Target audience(Difficulty)",
+              "desc": "Beginner/Intermediate/Experienced"
+            },
+            "timeslot": {
+              "title": "Preferable time slot",
+              "desc": "25min/40min"
+            },
+            "language": {
+              "title": "Language",
+              "desc": "Korean/English"
+            },
+            "note": {
+              "title":"Note or Question",
+              "desc": "Only PyCon Korea Organizer can view this section, so feel free to write in any form"
+            }
+          },
+          "conclusion": "Only title, summary, details, target audience, time slot, and language will be disclosed to early bird holders during preference vote."
+        },
+        "conclusion": "Do you feel a little bit overwhelmed with all these criteria? Don't worry! Real guidance is now here. We'll help you with detailed information about how to work on your proposal."
+      },
+      "selectTopic": {
+        "title": "Select a topic",
+        "description": "The best way to select a topic is to review topics from previous PyCon event. Not only look for topic, but also get the reference from presentation slides will help you start. Choose interesting topic for audience!",
+        "viewOtherPycon": "See PyCon in other countries 👉",
+        "conclusion": "Once you decide your topic, now you can start thinking about what should be on your proposal in detailed level. Check below information for help."
+      },
+      "proposalType": {
+        "title": "Good proposal vs Not good proposal",
+        "good": {
+          "title": "Good proposal 👍",
+          "item1": "Include below information on your summary/details section.",
+          "item1-1": "What kind of background does audience need to understand this talk?",
+          "item1-2": "What will audience gain after attend this talk?",
+          "item2": "Write presentation flow and estimate time of your talk.",
+          "item3": "If your topic is not familiar to most of Python users, Please include blog address, wiki, source code to help understand topic."
+        },
+        "bad": {
+          "title": "Not good proposal 🙅‍️",
+          "item1": "Please avoid deliver only simple information such as how to use or advertise your(or your company's) products. However, If you have case at company where you solve programming issue or open source project that helps to audience is more then welcome.",
+          "item2": "Proposal should be completed and detailed. Incomplete proposal is not acceptable."
+        }
+      },
+      "difficulty": {
+        "title": "How to target your audience",
+        "desc1": "A good presentation delivers right information to specific target audience with certain Python level.",
+        "desc1-1": "It’s not a good to talk about solve performance issue to release GIL within C code block which is generated by Cython to beginner level audience.",
+        "desc1-2": "Other cases, basic introduction of Cython or GIL is too easy for expert level audience.",
+        "desc2": "Just like an example above, some cases are easier to select audience than others. but, not all cases are this easy! For those who needs a little more guideline on target audience selection, we have a few things to tell you.",
+        "beginner": {
+          "title":"Beginner",
+          "desc1": "None or little bit of knowledge about Python. They have basic syntax and control flow knowledge but don’t have much of knowledge or experience in standard library and programming in general.",
+          "desc2": "For topic for beginners, topic like \"experience with python\" or \"how to become intermediate in python programming skill\" would be appropriate. Like Pandas or Django, not a built-in package of python is not for beginners."
+        },
+        "intermediate": {
+          "title":"Intermediate",
+          "desc1": "Usually, intermediate level audience like to know how python can be utilized in other programming area. Most of them used python for a long time but have less experience in how python can be utilized and used in many other area such as machine learning or data analysis.",
+          "desc2": "For this target audience, use of web framework, machine learning, web traffic monitoring, and automation could be a good topic. Please understand a proposal for intermediate level users may asked to modify its contents to beginner or expert level after review from program team."
+        },
+        "experienced": {
+          "title":"Experienced",
+          "desc1": "Expert level users are familiar with python programming and general concept of programming. A difference between intermediate and expert is the knowledge and experience of specific field they are in and higher level of programming knowledge.",
+          "desc2": "For expert level users, optimization, internals of library, or Python internal is recommended."
+        }
+      }
+    },
+    "talkProposal": {
+      "pageTitle": "Proposing a talk :: PyCon Korea 2019",
+      "title": "Proposing a talk",
+      "description1": "We are recruiting a variety of Python-related presentations, such as academic or commercial projects for Python, case studies. Please refer to the Guide for Speakers for more information.",
+      "schedule": {
+        "open": "CFP Open",
+        "close": "CFP Close",
+        "reviewStart": "Talk Proposal Review Start",
+        "reviewFinish": "Talk Proposal Review Finish",
+        "announcement": "Speaker Confirmation"
+      },
+      "process": {
+        "title": "Selection procedure",
+        "desc": "The procedure of selecting an talk is as follows. Information related to this can be found on the PyCon Korea website or e-mail.",
+        "item1": "After the CFP deadline, the PyCon Korea Preparation Organizer reviews the proposed talk.",
+        "item1-1": "If we need more information, we would request it.",
+        "item2": "Begin reviewing CFP",
+        "item3": "After reviewing CFP, the final speaker will be confirmed.",
+        "item3-1": "Regardless of the result, we will send an result e-mail to all of you."
+      },
+      "application": {
+        "title": "Apply for CFP",
+        "slideUrl": "Slide Url",
+        "slideUrlDesc": "Please enter the link after uploading presentation material to Google Slide or Slideshare.",
+        "stages": {
+          "common": {
+            "button": {
+              "previous": "Previous",
+              "saveDraft": "Save draft",
+              "next": "Next"
+            }
+          },
+          "stages1": {
+            "header": "Save a profile",
+            "item1": "E-mail",
+            "item2": "Name in Korean",
+            "item3": "Name in English",
+            "item4": "Affiliation",
+            "item5": "Phone Number",
+            "desc1": "The information registered as a speaker profile will be saved in profile and can be edited in My Profile page. The profile will be used in Progam page later.",
+            "button": "Save the profile and Continue"
+          },
+          "stages2": {
+            "header": "Basic information",
+            "item1-1": "Topic(Korean)",
+            "item1-2": "Topic(English)",
+            "item2": "Session Category",
+            "item3": "Session Difficulty",
+            "item4": "Prerequisities to understand the session",
+            "item5": {
+              "header": "Session Length",
+              "sub1": "25 mins",
+              "sub2": "40 mins"
+            },
+            "item6": {
+              "header": "Language",
+              "sub1": "In Korean",
+              "sub2": "In English"
+            },
+            "button1": "Previous",
+            "button2": "Save draft",
+            "button3": "Next",
+            "button4": "Submit",
+            "alert": "Save Completed",
+            "nameKorean":"Sponsor Name (Korean)",
+            "nameEnglish": "Sponsor Name (English)",
+            "imageLogoFile": "Sponsor logo (Image)",
+            "imageLogoFileGuide": ".JPG, .PNG",
+            "vectorLogoFile": "Sponsor logo (Vector)",
+            "vectorLogoFileGuide": ".SVG, .AI",
+            "primaryContactInformation": "Primary Contact Information",
+            "primaryContactPersonEmail": "Primary Contact Email for Pycon Account",
+            "primaryContactPersonName":"Primary Contact Person's Name",
+            "businessEmail": "Business Email",
+            "sponsorshipIntroduction": "Sponsorship Introduction Info.",
+            "sponsorshipLevel":"Sponsorship Level",
+            "registrationNumber": "Company Registration Number",
+            "registrationCertificateFile":"Business Registration Certificate",
+            "website":"Sponsor Official/Service Website",
+            "businessIntroduction": "Sponsor Business Introduction Info.",
+            "introductionKorean":"Sponsor Introduction (Korean)",
+            "introductionEnglish": "Sponsor Introduction (English)",
+            "introductionGuide":"These are the contents to be described on the details page on the Pycon Official Sponsor homepage. Details may be added or modified later."
+          },
+          "stages3": {
+            "header": "Detailed information",
+            "item1": {
+            "sub1-1": "Contents of CFP in detail(Korean)",
+            "sub1-2": "Contents of CFP in detail(English)",
+            "desc1": "In case it's accessive, please provide an external link."
+            },
+            "item2":{
+              "header": "Have you presented the material in other events?",
+              "button1": "Yes, I have",
+              "button2": "No, I haven't"
+            },
+            "item3": "A conference you presented the material",
+            "item4": "External link to your presentation material",
+            "item5": {
+              "header": "Comments and Enquiries",
+              "desc1": "Feel free to write comments to reviewers"
+            }
+          },
+          "stages4": {
+            "header": "CoC and Ethics",
+            "item1": {
+              "header": "PyCon Korea Code Of Conduct",
+              "desc1": "PyCon Korea is where various people meet and interact. We want all participants in the community to feel respected and welcomed without feeling physical and mental threats. To this end, all participants, including speaker, must follow the PyCon Korea Code of Conduct (CoC).",
+              "desc1-1": "PyCon Korea participants should not be discriminated against by various personal circumstances such as gender, sexual orientation, disability, physical appearance, body size, race, or religion.",
+              "desc1-2": "If the presentation could seriously violate the CoC, we may ask you to correct the presentation. If you do not respond to the our request, the presentation can be canceled.",
+              "desc1-3": "The contents of the CoC may be updated from time to time. If the content is updated, the PyCon Korea Preparation Organizers may ask for agreement of CoC again",
+              "agree": "I have confirmed the above contents and promise to follow the PyCon Korea CoC."
+            },
+            "item2": {
+              "header": "Presentation Ethics",
+              "desc1": "All presentation are made based on mutual trust and respect. Therefore, all presentation should follow the following presentation ethics.",
+              "desc1-1": "If you use or refer someone else's creations, you must comply with the rights of the original copyright holder.",
+              "desc1-2": "If your presentation contains sensitive content, such as content related to your company's business, you must obtain the consent of your organization.",
+              "desc1-3": "You must make the same presentation as your suggestion.",
+              "desc1-4": "Do not use intentional manipulated or falsified data.",
+              "agree": "I have confirmed the above contents. I also agree that I will be responsible if I fail to comply, and that the selection of the presenter may be canceled if found to be violated."
+            },
+            "item3": {
+              "header": "Sharing presentation",
+              "desc1": "PyCon Korea is aiming at a community that shares technology experiences and grows together. Therefore, all slides and movie of presentations are released for sharing knowledge.",
+              "desc1-1": "If your slides has sensitive information such as company confidentiality or copyright, please prepare a public version of the slide.",
+              "desc1-2": "If you do not want to release your presentation, please contact the PyCon Korea Organizer(program@pycon.kr).",
+              "agree": "I have confirmed the above contents."
+            },
+            "proposeButton": "Propose presentation"
+          },
+          "stages5": {
+            "header": "Submit CFP",
+            "desc1": "You can check and edit your CFP at Proposal and Application page",
+            "button1": "View Proposal and Application"
+          }
+        }
+      }
+    },
+    "tutorial": {
+      "title": "Proposing a tutorial",
+      "schedule": {
+        "open": "Open tutorial proposal",
+        "deadline": "Close tutorial proposal",
+        "announce": "Announce tutorial programs"
+      },
+      "description1": "Do you think that you would be able to assemble 2~3 hours of material and lead a classroom full of PyCon attendees through learning a new skill, library, or technology? Then you might want to apply to be one of our tutorial instructors for PyCon Korea 2019!",
+      "description2": "",
+      "description3": "",
+      "eventDate": {
+        "title": "Event Date & Venue",
+        "date": "2019.08.16 Friday",
+        "venue": "Coex Grand Ballroom 2F"
+      },
+      "proposeButton": "Propose a tutorial"
+    }
+  },
+  "ticket": {
+    "overview": {
+      "pageTitle": "티켓 종류",
+      "title": "티켓 종류",
+      "description": "파이콘 한국에는 발표 세션을 포함한 이틀 간의 컨퍼런스, 튜토리얼, 영코더 등 다양한 행사가 있습니다."
+    },
+    "myTickets": {
+      "pageTitle": "내 티켓",
+      "title": "내 티켓",
+      "description": "내가 구매한/취소한 티켓 내역을 확인합니다."
+    },
+    "myTicket": {
+      "pageTitle": "티켓 상세",
+      "title": "티켓 상세",
+      "description": "내가 구매한/취소한 티켓의 상세 내역을 확인합니다."
+    },
+    "conference": {
+      "pageTitle": "컨퍼런스 티켓",
+      "title": "컨퍼런스 티켓",
+      "description": "파이콘 한국의 메인 행사인 8월 17-18일(토-일) 이틀 간의 컨퍼런스에 입장할 수 있는 티켓입니다."
+    },
+    "tutorial": {
+      "pageTitle": "튜토리얼 티켓",
+      "title": "튜토리얼 티켓",
+      "description": "튜토리얼 설명",
+      "description1": "튜토리얼 설명",
+      "description2": "튜토리얼 설명"
+    },
+    "sprint": {
+      "pageTitle": "스프린트 티켓",
+      "title": "스프린트 티켓",
+      "description": "스프린트 설명",
+      "description1": "스프린트 설명",
+      "description2": "스프린트 설명"
+    },
+    "youngcoder": {
+      "pageTitle": "영코더 티켓",
+      "title": "영코더 티켓",
+      "description": "영코더 설명"
+    },
+    "childcare": {
+      "pageTitle": "아이돌봄 티켓",
+      "title": "아이돌봄 티켓",
+      "description": "아이돌봄 설명"
+    }
+  },
+  "sponsor": {
+    "event": {
+      "invitation": "Sponsor Invitation"
+    },
+    "submitted": "Sponsorship application has been submitted.",
+    "submittedDesc": "Proposals submitted can be viewed and modified in the proposal and application history. We will inform you about the method and procedure of donation payment after review of the PyCon Korea Preparatory Committee.",
+    "prospectus": {
+      "pageTitle": "Sponsor Prospectus :: PyCon Korea 2019",
+      "title": "Sponsor Prospectus",
+      "description1": "So, sponsoring this event is the most honest way to show the direction and attitude of the sponsor or individual to the open source community and Python users. In addition, we will support you in various media, sponsor tutorial, sponsor session and booth composition, and you can use it as a place to recruit excellent developers.",
+      "schedule": {
+        "open": "Sponsor Invitation Open",
+        "deadline": "Sponsor Invitation Deadline"
+      },
+      "guideTitle": "Sponsorship Guide",
+      "faqTitle": "Sponsor FAQ",
+      "packageTitle": "Sponsorship Packages",
+      "packageDesc": "Sponsorship packages may vary by venue and circumstances. And sessions, tutorials and bag inserts provided by sponsors should be served after consultation with PyCon Korea Organizers.",
+      "boothDesc": "The sponsor booth will only be available at conferences that will be held between August 17 (Sat) and 18 (Sun).",
+      "packages" : {
+        "level": {
+          "header": "Level",
+          "keystone": "Keystone",
+          "diamond": "Diamond",
+          "sapphire": "Sapphire",
+          "platinum": "Platinum",
+          "gold": "Gold",
+          "silver": "Silver",
+          "community": "Community"
+        },
+        "fee": {
+          "header": "Sponsorship Fee"
+        },
+        "availability": {
+          "header": "Availability",
+          "unlimited": "Unlimited"
+        },
+        "conferencePasses": {
+          "header": "Conference Passes"
+        },
+        "booth": {
+          "header": "Booth",
+          "table": "Table (2nd floor robby)"
+        },
+        "openlunch": {
+          "header": "Open Lunch"
+        },
+        "ost": {
+          "header": "OST room name for sponsor",
+          "space": "Space for {number} people"
+        },
+        "session": {
+          "header": "Sponsor Session"
+        },
+        "goods": {
+          "header" : "Goods can be included in eco bag"
+        },
+        "recruitment": {
+          "header" : "Recruitment advertisement"
+        },
+        "logo": {
+          "header": "Logo placement",
+          "attendeePass": "Attendee pass",
+          "website": "WebSite",
+          "hangingBanner": "Hanging banner",
+          "standingBanner": "Standing banner",
+          "webSite": "WebSite"
+        },
+        "desc1": "Sponsorship Fee does not include VAT. 10% VAT will be added.",
+        "desc2": "booth dimension is 3m x 2m x 2.5m (approx.)",
+        "desc3": "\"Goods can be included in eco bag\" means that the goods can be included in the eco bag provided to all participants.",
+        "desc4": "Details may change slightly before the event.",
+        "desc5": "Community sponsorship is only available for non-commercial organizations.",
+        "desc6": "Publishing sponsorship: history of publishing for Python book is required.",
+        "desc7": "Media sponsorship: Any related history for python is required."
+      }
+    }
+  },
+  "coc": {
+    "pageTitle": "Code Of Conduct :: PyCon Korea 2019",
+    "title": "Code Of Conduct",
+    "notice": "The PyCon Korea CoC will be updated in May 2019.",
+    "desc1": "PyCon Korea(henceforth referred as PyCon) is a non-profit community conference intended for networking and collaborating in the developer community.",
+    "desc2": "We value the participation of each member of the Python community and want all attendees to have an enjoyable and fulfilling experience. Accordingly, all attendees are expected to show respect and courtesy to other attendees throughout the conference and at all conference events, whether officially sponsored by PyCon or not.",
+    "desc3": "To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at any PyCon event are required to conform to the following Code of Conduct. Organizers will enforce this code throughout the event.",
+    "shortVersion": "The short version",
+    "short1": "PyCon is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form.",
+    "short2": "All communication should be appropriate for a professional audience including people of many different backgrounds. Sexual language and imagery is not appropriate for any conference venue, including talks.",
+    "short3": "Be kind to others. Do not insult or put down other attendees. Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for PyCon.",
+    "short4": "Attendees violating these rules may be asked to leave the conference without a refund at the sole discretion of the conference organizers.",
+    "longVersion": "The longer version",
+    "long1": "Harassment includes offensive communication related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.",
+    "long2": "Participants asked to stop any harassing behavior are expected to comply immediately.",
+    "long3": "Exhibitors in the expo hall, sponsor or vendor booths, or similar activities are also subject to the anti-harassment policy. In particular, exhibitors should not use sexualized images, activities, or other material. Booth staffs (including volunteers) should not wear sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.",
+    "long4": "Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive to those around you. Excessive swearing and offensive jokes are not appropriate for PyCon.",
+    "long5": "If a participant engages in behavior that violates this code of conduct, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.",
+    "license": "License",
+    "licenseDesc": "This Code of Conduct was forked from the example policy from the Geek Feminism wiki, created by the Ada Initiative and other volunteers. which is under a Creative Commons Zero license. <a href=\"https://github.com/pythonkr/pycon-code-of-conduct\">github link</a>",
+    "paragraph1": "Purpose and Objective",
+    "paragraph1-1": "PyCon Korea welcomes all participants",
+    "paragraph1-1-1": "The PyCon Korea Code of Conduct (hereinafter called Code of Conduct) is the most basic promise that all members must observe to create a Python Community that welcomes everyone.",
+    "paragraph1-1-2": "PyCon Korea:",
+    "paragraph1-1-2-1": "Aims to create events that anyone can participate",
+    "paragraph1-1-2-2": "Aims to create an atmosphere where all forms of differences are accepted and respected.",
+    "paragraph1-1-2-3": "Aims to create a conference where all participants are treated equal regardless of gender, sexual orientation, gender identity, nationality, race, region, religion, age, social status, education, intellectual level, appearance, disability, disease, preferred diets and so forth",
+    "paragraph1-1-2-4": "Aims to encourage an atmosphere that welcomes everyone.",
+    "paragraph1-2": "Why is it important to embrace all participants?",
+    "paragraph1-2-1": "PyCon Korea believes that an attitude of respecting diversity is the source for making society and community more abundant. In order to find solutions to solve difficult problems and help the community to continue to grow and bring about positive changes to the world, it is necessary to have various experiences and perspectives are needed.",
+    "paragraph1-3": "PyCon Korea does not tolerate discrimination and harassment",
+    "paragraph1-3-1": "Accordance to the Code of Conduct, the PyCon Korea preparatory committee can:",
+    "paragraph1-3-1-1": "Intervene or restrict situations where the safety of another participant/s is/are violated or if that person is not being respected.",
+    "paragraph1-3-1-2": "Expel participants who violated the Code of Conduct from the event, if necessary. In this case, participation fees will not be refunded.",
+    "paragraph1-3-1-3": "Report the situation to judicial or medical institutes if necessary or if requested to do so.",
+    "paragraph1-4": "The Code of Conduct applies to all situations related to the event",
+    "paragraph1-4-1": "The Code of Conduct applies to events hosted by Python user groups, processes accompanying the event, and to all participants taking part in such processes.",
+    "paragraph1-4-1-1": "Applies to all participants (speakers, cooperative organizations, sponsors, volunteers, preparatory committee, etc.).",
+    "paragraph1-4-1-2": "Applies to all places, processes and outcomes including venue, website, booklets, mail, social media networks, meetings, code repository and other places are connected with the event or the community.",
+    "paragraph1-5": "Please read carefully",
+    "paragraph1-5-1": "This does not contain the entire list of things that you should not do. What is more important is to truly comprehend the intent of the contents of this Code of Conduct and use it as a guideline to treat each other better. Rather than following this Code of Conduct to the letter, we would like to advice to think about the consequences and reasoning of the specific action with the CoC in mind.",
+    "paragraph2": "Community",
+    "paragraph2-1": "Let’s create a welcoming mood",
+    "paragraph2-1-1": "All participants should feel that they are welcomed, regardless of their background. People who feel hostile or unwelcomed will hesitate to take part in the community. Please create a welcoming mood to help the Python Community grow.",
+    "paragraph2-1-1-1": "Please treat beginners or first-time visitors to the event kindly and warmly.",
+    "paragraph2-1-1-2": "Be brave.",
+    "paragraph2-1-1-2-1": "If you are more comfortable just listening or watching, then that is fine too. But, if you feel hesitation at a time when you want to participate in a conversation, just remember that the people who are talking actively next to you may have also met for the first time today.",
+    "paragraph2-1-1-3": "Please react.",
+    "paragraph2-1-1-3-1": "A person might have had to build up courage to come talk to you.",
+    "paragraph2-1-1-3-1-1": "Please answer kindly to questions or requests for assistance.",
+    "paragraph2-1-1-3-1-2": "Express your appreciation for responses.",
+    "paragraph2-2": "Make PyCon Korea safe",
+    "paragraph2-2-1": "Always take the responsibility for what you say and behave. PyCon Korea is an event joined by various people. It is prohibited to speak or act in a way that is threatening or that can be dangerous to others so that everyone can feel that the community is safe and reliable.",
+    "paragraph2-2-1-1": "Please avoid unnecessary physical contact with others.",
+    "paragraph2-2-1-1-1": "Do not hold hands or put your arms around others without consent",
+    "paragraph2-2-1-2": "Please do not use profanity, vulgar language, derogatory terms or any form of speech and action that could offend others during conversations.",
+    "paragraph2-2-1-2-1": "(Even if you are talking with a close friend, it might be discomforting or threatening to others.)",
+    "paragraph2-2-1-3": "Do not threaten others by expressing anger, using violent body language, raising your voice or any action that could make the person threatened.",
+    "paragraph2-2-1-4": "Do not engage in any sexual dialog including verbal and non-verbal expressions or behavior that may make the other person feel sexually harassed or shamed.",
+    "paragraph2-2-1-4-1": "Example 1: “It was drab with just a bunch of dark men here. How nice it is to have a lady join. This place is basically filled with pretty ladies ~”",
+    "paragraph2-2-1-4-2": "Example 2: Saying things like ‘Oh, so sexy’ as a mere expression",
+    "paragraph2-2-1-5": "Do not touch the property of others without consent.",
+    "paragraph2-2-1-5-1": "Mobile phones, laptops, etc.",
+    "paragraph2-2-1-5-1-1": "<a href='http://knat.go.kr/knw/home/knat_DB/my.html'>Assistance devices for disabilities</a> (hearing aids, wheelchairs, etc.)",
+    "paragraph2-2-1-6": "Dangerous items are not allowed.",
+    "paragraph2-2-1-6-1": "Baseball bats, chemical substances, weapons, sharp objects, etc.",
+    "paragraph2-2-1-7": "Do not engage in any and all violent behavior that are against the law",
+    "paragraph2-2-1-8": "Do not support or encourage any of the aforementioned behavior.",
+    "paragraph2-3": "Please respect differences",
+    "paragraph2-3-1": "Please create an event that can be enjoyed by everyone regardless of gender, sexual orientation, gender identity, nationality, race, region, religion, age, social status, education, intellectual level, appearance, disability, disease, preferred diets, etc.",
+    "paragraph2-3-1-1": "Speech and behavior based on sexual stereotypes is not allowed",
+    "paragraph2-3-1-1-1": "Example 1: “All men/women are just like that.”",
+    "paragraph2-3-1-1-2": "Example 2: Presuming that a female developer is a front-end developer",
+    "paragraph2-3-1-1-3": "Example 3: Presuming that a counterpart has lower intellectual levels based on the mere fact of being a woman and trying to explain too much",
+    "paragraph2-3-1-2": "Do not use sexual orientation, gender identity or sexual expressions as jokes or as expressions of belittlement.",
+    "paragraph2-3-1-2-1": "Example 1: “Are you gay?”, “Your hair is so short that you look like a lesbian.”",
+    "paragraph2-3-1-3": "Do not discriminate by age, social status or seniority.",
+    "paragraph2-3-1-3-1": "Example 1: Do not talk down to people you meet for the first time just because they are younger",
+    "paragraph2-3-1-3-2": "Example 2: “You don’t have much seniority, so you probably won’t know, but…”",
+    "paragraph2-3-1-4": "Do not speak about matters conclusively when they may differ depending on income and wealth gaps.",
+    "paragraph2-3-1-5": "Racist / belittling races or using derogatory expressions based on biases against regions or nations is not allowed",
+    "paragraph2-3-1-5-1": "Example 1:Discriminatory language such as Ja*, Goo*, Chin*",
+    "paragraph2-3-1-5-2": "Example 2: Racial discriminatory language such as black brother, Yankee, banana",
+    "paragraph2-3-1-5-3": "Example 3: Regional discriminatory language depending on where one lives or is from",
+    "paragraph2-3-1-6": "Do not criticize another person’s religion or political belief and do not force your beliefs on others.",
+    "paragraph2-3-1-6-1": "Example 1: “This is why nobody can get along with people who believe in OO religion”",
+    "paragraph2-3-1-6-2": "Example 2: “This is why nobody can get along with people who support the OO party”",
+    "paragraph2-3-1-7": "Be careful not to make unnecessary assessments or make discriminatory comments about the appearance of someone.",
+    "paragraph2-3-1-7-1": "Example 1: “OO, you look (do not look) like a developer”",
+    "paragraph2-3-1-7-2": "Example 2: (When describing someone) “That pretty-looking female developer”",
+    "paragraph2-3-1-8": "Do not act based on biases that people with disabilities always need help.",
+    "paragraph2-3-1-8-1": "Behaving based on your thoughts without being asked is interference. You should first check the intent of the person and offer your services according to the requested method.",
+    "paragraph2-3-1-9": "Do not degrade diseases or disabilities.",
+    "paragraph2-3-1-9-1": "Do not use language used for degrading people with disabilities.",
+    "paragraph2-3-1-9-1-1": "Example 1: Blind, Cyclops, deaf, dumb, cripple, etc.",
+    "paragraph2-3-1-9-1-2": "Example 2: “Are you handicapped?”, “Don’t you think that person is mental?”",
+    "paragraph2-3-1-9-1-3": "Example 3: “I think this legacy code is going to give me cancer.”",
+    "paragraph2-3-1-9-2": "“Are you handicapped?”, “Don’t you think that person is mental?”",
+    "paragraph2-3-1-9-3": "“I think this legacy code is going to give me cancer.”",
+    "paragraph2-3-1-10": "Do not coerce other dietary habits and do not be derogative of other diets.",
+    "paragraph2-3-1-10-1": "Example 1: “What’s the point of living if you don’t drink?”",
+    "paragraph2-3-1-10-2": "Example 2: “You should eat meats to keep you healthy.”",
+    "paragraph2-3-1-10-3": "Example 3: There is no reason for a person to explain their dietary habits to you. Do not ask questions or force them to explain their choices.",
+    "paragraph2-3-1-11": "Do not speak in a way that is discriminatory against education level or major.",
+    "paragraph2-3-1-11-1": "Example 1: “Are you a high school grad?”",
+    "paragraph2-3-1-11-2": "Example 2: “You didn’t major in this, so you probably won’t know”",
+    "paragraph2-3-1-12": "Do not support or encourage any of the above biases or discrimination.",
+    "paragraph2-3-2": "Your form of speech and behavior may be taken differently by from what you intended. Stop your speech and behavior as soon as possible if the other person feels uncomfortable.",
+    "paragraph3": "Communication",
+    "paragraph3-1": "Please respect the speaker when speaking",
+    "paragraph3-1-1": "Do not engage in behavior or make noises that can disturb speakers or listeners during presentations.",
+    "paragraph3-1-2": "Do not stop the speaker until he or she clearly states his or her intent that it is okay. Ask questions according to the prescribed time with the prescribed method.",
+    "paragraph3-2": "Discussions are for everybody",
+    "paragraph3-2-1": "In open spaces, many people participate in conversations. Always remember that the opinion of others is just as important as yours. Refrain from cutting others off or raising your voice.",
+    "paragraph3-2-1-1": "Please take precaution so that a few people do not take excessive amounts of speaking opportunities. Let everyone have equal chances to speak.",
+    "paragraph3-2-1-2": "Even if you have a dispute with another person, treat that person in a respectful attitude.",
+    "paragraph3-3": "Have constructive discussions",
+    "paragraph3-3-1": "We all have different backgrounds and knowledge. It is natural for people to have different opinions.",
+    "paragraph3-3-2": "Constructive criticism and condemnation are different. Constructive criticism can help with the development of the community and its members. But condemnation focusing on bringing others down or to hurting others are strictly prohibited. If you have a different opinion from another person, state your opinion in a respectful and proper attitude. Have an accepting attitude towards proper criticism which may help you build your knowledge base.",
+    "paragraph3-3-2-1": "Use respectful expressions. Here are some examples of what not to do.",
+    "paragraph3-3-2-1-1": "Example 1: That language/library/operating system is garbage X",
+    "paragraph3-3-2-1-2": "Example 2: I think that language/library/operating system has a OO weakness O",
+    "paragraph3-3-2-2": "Criticize content, not people.",
+    "paragraph3-3-2-2-1": "Example 1: People who believe in the OO theory are idiots X",
+    "paragraph3-3-2-2-2": "Example 2: The OO theory does not have enough evidential support O",
+    "paragraph3-3-2-3": "Concentrate on alternatives and not flaws or problems.",
+    "paragraph3-3-2-4": "Do not try to humiliate others to show off your knowledge.",
+    "paragraph3-4": "Do not engage in one-sided propaganda or incitement",
+    "paragraph3-4-1": "Individual thoughts and political preferences must be respected. However, one-sided propaganda or incitement that can interfere with the smooth participation in events by other participants, or that which is irrelevant to the context are prohibited.",
+    "paragraph3-4-1-1": "Adding political slogans or similar political innuendos in presentation slides",
+    "paragraph3-4-1-2": "Chanting and yelling slogans in groups in front of booths",
+    "paragraph4": "Privacy",
+    "paragraph4-1": "Be careful when taking photos or videos",
+    "paragraph4-1-1": "Always respect the intent of the person being filmed when taking a photo or video. Some people may not want to be in photos or videos.",
+    "paragraph4-1-1-1": "All events operated by the PyCon Korea Preparatory Committee have plans for people who do not want to be in videos or photos.",
+    "paragraph4-1-1-1-1": "The detailed method for expressing your intent will be notified for each event.",
+    "paragraph4-2": "Protect personal information",
+    "paragraph4-2-1": "If your counterpart does not want to answer a question, do not ask again. Please respect the intent of others.",
+    "paragraph4-2-2": "Please understand that information that may not be sensitive to you, may not be the same for others.",
+    "paragraph4-2-2-1": "Some questions can be rude no matter how you ask it. (please refrain from asking the following)",
+    "paragraph4-2-2-1-1": "Example 1: “How old are you?”",
+    "paragraph4-2-2-1-2": "Example 2: “Are you married?”, “Do you have a child?”, “Do you have a lover?”",
+    "paragraph4-2-2-1-3": "Example 3: “What kind of medication do you take?”",
+    "paragraph4-2-2-1-4": "Example 4: “How did you become disabled?”",
+    "paragraph5": "Profit-seeking Behavior",
+    "paragraph5-1": "PyCon Korea prohibits profit-seeking behavior of unauthorized organizations. Profit-seeking behavior includes selling items to gain profits, and all actions that an individual or organization can gain monetary profits whether in the short-term or long-term.",
+    "paragraph5-1-1": "Approaching participants and asking for personal information for reasons such as employment opportunities, etc.",
+    "paragraph5-1-2": "Distributing flyers at the venue without authorization",
+    "paragraph5-1-3": "Other profit-seeking activities",
+    "paragraph5-2": "In the event that profit-seeking activity not authorized by PyCon Korea is discovered, legal measures may be taken for the smooth operation of the event.",
+    "paragraph6": "Public Manners",
+    "paragraph6-1": "The space where PyCon Korea is held is a public space attended by many people. Please keep public manners so that it can be an event for everyone to enjoy pleasantly.",
+    "paragraph6-2": "Don’t be loud",
+    "paragraph6-2-1": "Videos/music played in high volume without using earphones or headphones",
+    "paragraph6-2-2": "Holding auxiliary events using microphones or amplifiers",
+    "paragraph6-3": "Keep the venue clean",
+    "paragraph6-3-1": "Observe the rules of the venue where the event is held.",
+    "paragraph6-3-2": "Clean up after yourself.",
+    "paragraph6-3-3": "Throw garbage in the garbage can. Observe the recycling rules.",
+    "paragraph7": "Reporting",
+    "paragraph7-1": "Reporting process is as follows",
+    "paragraph7-1-1": "If you have any problems, or if you see someone else having problems or you have any complaints, please request help to the PyCon Korea Preparatory Committee or the staff on site. In the case of emergencies, request help from the staff and also file a report to the competent authorities such as the police or fire station.",
+    "paragraph7-1-1-1": "E-mail: ",
+    "paragraph7-1-1-2": "The staff will be wearing t-shirts that stand out and they are trained on how to react to violations to the Code of Conduct.",
+    "paragraph7-1-2": "When a violation of the Code of Conduct report is received, the PyCon Korea Preparatory Committee shall protect the participant immediately according to the <a href='https://github.com/pythonkr/pycon-code-of-conduct/blob/korean/Attendee%20Procedure%20for%20incident%20handling.md'>Incident Handling Procedures</a> and shall take actions so that the violation is stopped. If necessary, actions such as removal from the venue or contact to judicial/medical institutes shall be made. Utmost efforts shall be taken to protect the reporter and/or victim during the course of this process.",
+    "paragraph7-1-3": "In the event that you suspect, but are not sure that there was a violation of the Code of Conduct, notify the Preparatory Committee and the Committee shall collect more information to come to a judgment, and decide whether or not to take action.",
+    "paragraph7-1-4": "Your courage can help us make a safer community.",
+    "paragraph7-2": "The Code of Conduct has the following limitations",
+    "paragraph7-2-1": "Despite various efforts to create a safe and pleasant community, the Code of Conduct cannot provide full and complete protection for participants from all threats.",
+    "paragraph7-2-1-1": "In the case of emergencies, request help from the staff and also file a report to the competent authorities such as the police or fire station.",
+    "paragraph7-2-1-2": "It is difficult to take action against a person or organization that a report was filed against based only on circumstantial evidence. If you feel unsafe regardless of the measures taken or not taken, we can help by accompanying you.",
+    "paragraph8": "Requests",
+    "paragraph8-1": "Please respect the Preparatory Committee",
+    "paragraph8-1-1": "Members of the PyCon Korea Preparatory Committee are all members of the Python community just like you, and they are volunteering their time and effort without form of remuneration from PyCon Korea.",
+    "paragraph8-1-2": "The PyCon Korea Preparatory Committee is working hard to respect and assist participants. We ask that you also show respect to the PyCon Korea Preparatory Committee.",
+    "paragraph8-1-2-1": "You may be asked for your cooperation such as wearing your nametag, etc. for smooth procession of the event. Please respect and abide to the requests of the Preparatory Committee on site.",
+    "paragraph8-1-2-2": "The privacy of the members of the Preparatory Committee must be protected. If you have any questions about the event, please direct inquiries to the official channel and not in private social media accounts of individual members of the PyCon Preparatory Committee.",
+    "paragraph8-1-3": "All members of the PyCon Korea Preparatory Committee shall abide by the Code of Conducts like all other participants. In the event that members of the PyCon Korea Preparatory Committee violate the Code of Conduct, fair actions in accordance with procedures and standards applied to other participants shall be taken.",
+    "paragraph9": "Contribution",
+    "paragraph9-1": "The PyCon Korea Code of Conduct may be subjected to change in order to better convey its intent, purpose and values. Your contributions will help the PyCon Korea Code of Conduct to develop continuously.",
+    "paragraph9-2": "Referred Sources",
+    "paragraph9-2-1": "The contents of the PyCon Korea Code of Conduct referred to the ideas of people who had the same concerns and conducted research before us.",
+    "paragraph9-2-2": "References",
+    "paragraph9-2-2-1": "Elastic Community Behavior Rules",
+    "paragraph9-2-2-2": "Spoqa Creator Code of Conduct",
+    "paragraph9-2-2-3": "Github Open Source Guides Code of Conduct",
+    "paragraph9-2-2-4": "OpenStack Code of Conduct",
+    "paragraph9-2-2-5": "JSConf EU 2019 Code of Conduct",
+    "paragraph9-2-2-6": "JSConf Korea 2019 Code of Conduct",
+    "paragraph9-2-2-7": "DEFCON Code of Conduct",
+    "paragraph9-2-2-8": "PyCon US 2019 Code of Conduct",
+    "paragraph10": "If you have any suggestions, please contribute",
+    "paragraph10-1": "PyCon Korea’s Code of Conduct is constantly changing to achieve the goal of creating a better community. Despite the painstaking efforts of the PyCon Korea Preparatory Committee and many other people, there are still areas for improvement in this Code of Conduct.",
+    "paragraph10-2": "You can also participate in the course of improving the Code of Conduct. If you have any suggestions or comments, or anything else regarding the Code of Conduct, please feel free to contact us at <a href='mailto:coc@pycon.kr'>coc@pycon.kr</a>. The Preparatory Committee will take a close look at your comments and suggestions.",
+    "paragraph10-3": "The PyCon Korea Preparatory Committee believes in the value of transparency and documentation. If there are any changes to the Code of Conduct, we will record all changes and disclose them through the website.",
+    "paragraph10-4": "Release Note",
+    "paragraph10-5": "This Code of Conduct was drafted by the PyCon Korea 2019 Preparatory Committee with the advice and consultation of outside experts."
+  },
+  "agreement": {
+    "title": "Complete the registeration process",
+    "desc1": "You have successfully authorized the following account.",
+    "socialService": "Social Service",
+    "email": "email",
+    "desc2": "When you authorize your account, we save the following public information",
+    "socialAccount": "Social Account ID",
+    "profileImage": "Profile Image",
+    "desc3": "Please complete the registeration process by agreeing to the terms.",
+    "agreeTermsOfService": "Agree terms of service",
+    "viewTermsOfService": "View terms of service",
+    "agreePrivacyProtectionPolicy": "Agree privacy protection policy",
+    "viewPrivacyProtectionPolicy": "View Privacy Protection Policy",
+    "finishRegisteration": "Submit"
+
+  },
+  "fixedFooter": {
+    "coc": "Code of Conduct",
+    "sponsor": "Sponsor",
+    "program": "Program",
+    "other": "Others",
+    "blogLink": "Blog",
+    "twitterLink": "Twitter",
+    "facebookLink": "Facebook",
+    "githubLink": "Github",
+    "flickerLink": "Flicker",
+    "youtubeLink": "Youtube",
+    "poweredBy": "Powered by Django and next.js",
+    "hostedOn": "Hosted on Naver D2",
+    "issueTrackerBy": "Collaboration tools are supported by Dooray!"
+  },
+  "termOfService": {
+    "pageTitle": "Term of Service :: PyCon Korea 2019",
+    "heading": "Term of Service",
+    "title0": "Purpose",
+    "paragraph0": "This \"Terms of Service\" (hereinafter referred as \"this agreement\"), the service which is provided by Python User Group Korea (hereinafter referred as the \"company\") and other services associated with it (hereinafter collectively referred as \"this service\") establishes all the statements that users must comply with when using this service as well as the relationship of rights and obligations between the users and the company. Users of this service must read the full text of this Terms of Service before accepting this agreement.",
+    "title1": "Agreement and modification of Terms of Services",
+    "paragraph1-1": "This agreement is published on notice page of this service and applied to all users who agreed on this agreement.",
+    "paragraph1-2": "The company can modify this agreement as long as it does not violate the related regulations. In case of modification of the agreement, the company should notice the updates 14 days in advance.",
+    "paragraph1-3":  "When there’s no neglection from the day of notification of modification and after 7 days of its application, it will be considered as the user agreed on the new agreement. If the user does not agree the new agreement, the user can opt out from the service.",
+    "title2": "Establishment of Contract",
+    "paragraph2": "When the user becomes a member of the service via sign-up, it is considered that the user agreed on the agreement and related policies and the contract will be established.",
+    "paragraph2-1": "If the user falls under any of the following, the user may not be accept for the \"Service\".",
+    "paragraph2-1-1": "When there’s false information in the contents of the application",
+    "paragraph2-1-2": "When the external usage of the service violates the agreement",
+    "paragraph2-2": "The statement of acceptance of the \"Service\" shall include information on the user's ability to confirm and sell the purchase application and to cancel the cancellation of the application for purchase.",
+    "title3": "Privacy",
+    "paragraph3": "The service collects the minimal private information to provide services for the user. To protect the privacy and resolve disputes, the company follows the privacy protection policy established internally.",
+    "title4": "Discontinuance of Service",
+    "paragraph4-1": "The \"Company\" can modify or discontinue the whole or part of the service in case of change of business, abandonment of the business, M&A, or technical issues.",
+    "paragraph4-2": "In case of the modification or discontinuance of the service, the contents, reasons, and date should be noticed 7 days in advance of its modification or discontinuance in a manner that the user can recognize it, such as on notice board.",
+    "title5": "Membership Withdrawal and Eligibility",
+    "paragraph5-1": "The member can request for withdrawal of the membership to the service at any time and the service should treat it within 7 days of its acceptance.",
+    "paragraph5-2": "When the member falls under the following category, the “Service” can restrict or discontinue the membership.",
+    "paragraph5-2-1": "If there’s false information in the contents of the membership application form",
+    "paragraph5-2-2": "If the member threatens the order, such as interfering with the use of another person's \"service\" or stealing the information",
+    "paragraph5-2-3": "If the member uses the “Service” for actions that violate the regulations or the agreement",
+    "title6": "Refund",
+    "paragraph6": "The \"Service\" should notice the reason in case that requested service cannot be provided and take action required to refund within 7 days.",
+    "title7": "User’s Duties and Responsibilities",
+    "paragraph7-1": "If the Company believes that the member is using the service in a form that is contrary to the Terms, the Company shall take such action as deemed appropriate by the Company. However, the Company has no obligation to prevent or correct such violations.",
+    "paragraph7-2": "If, for any reason, the User receives a claim from a third party and the Company incurs any or all damages directly or indirectly (including attorneys' fees), the User shall immediately compensate at the request of the Company.",
+    "paragraph7-2-1": "Registration of false contents when applying or changing",
+    "paragraph7-2-2": "Stealing others’ information",
+    "paragraph7-2-3": "The modification of contents written in the \"Service\"",
+    "paragraph7-2-4": "Publication of information other than information provided by the \"Service\"",
+    "paragraph7-2-5": "Infringement of intellectual property rights such as \"Service\" or other third party's copyright",
+    "paragraph7-2-6": "Damage of honor of the \"Service\" or other people or interference of the work",
+    "paragraph7-2-7": "Publication of sensual or violence messages, videos, or in any form on the \"Service\"",
+    "title8": "The Use of Intellectual Property",
+    "paragraph8-1": "The copyrights and other intellectual property rights of the work created and distributed by the company belong to the company.",
+    "paragraph8-2": "The user may not use the information to which the intellectual property right belongs to \"Service\" among the information obtained by using \"Service\" for commercial purposes by copying, transmitting, publishing, distributing, broadcasting or other methods without prior consent of \"Service\" should not be used.",
+    "paragraph8-3": "In the usage of materials which the user has its intellectual property, the “Service” should give a notice to the user.",
+    "title9": "Resolution of Disputes",
+    "paragraph9-1": "The laws of the Republic of Korea apply to electronic commerce lawsuits filed between the “Service” and users.",
+    "paragraph9-2": "Any dispute arising between the “Service” and the user shall be brought to the jurisdiction of the Seoul Central District Court."
+  },
+  "privacyPolicy": {
+    "heading": "Privacy Protection Policy",
+    "title0": "What is Privacy Protection Policy?",
+    "paragraph0": "'Privacy Protection Policy' means the guidelines that Python User Group Korea (hereinafter referred to as 'Company') must comply with in order to safeguard the valuable personal information of all users and to use contents and services with peace of mind.",
+    "title1": "Items and Purpose of Collecting Personal Information",
+    "paragraph1-1": "Membership - Collect emails and names as essential for providing content such as sign-up confirmation, identity verification, event guide, and ticket payment within the service.",
+    "paragraph1-2": "Speaker Suggestion - Information such as e-mail, name, English name, phone number, and affiliation are required in order to confirm the identity of the person. It will be used as a guide on web-site/event for participants.",
+    "paragraph1-3": "Personal information that you provide may be modified at any time and personal information will not be provided or used separately from third parties without the consent of the user and we will pay close attention when sharing contents containing personal information.  The user included in each case must submit required data as requested for each item in order to subscribe the service or suggest the speaker the service can be subscribed or suggested, and when the information is submitted, the user is considered to have consented to the collection of personal information.",
+    "title2": "Automatic Collection of Personal Information - Cookies",
+    "paragraph2": "We use cookies to provide convenient services such as personalized content and automatic sign-in to each user. Cookies do not store any personally identifiable information, and you have the option of installing cookies. If you do not want to, you can allow all cookies by setting options in your web browser, check each time a cookie is saved, or refuse to save all cookies. However, if you refuse to install cookies, it may be difficult to provide custom content.",
+    "title3": "Measures to Ensure the Security of Personal Information",
+    "paragraph3-1": "We manage the person in charge of personal information to the minimum. The person in charge carries out necessary measures for access control and controls the unauthorized access from outside using the intrusion prevention system.",
+    "paragraph3-2": "In order to prevent leakage and damage of personal information by hacking or computer virus, security program is installed, periodically renewed / checked, technically and physically monitored and blocked.",
+    "title4": "Measures to Ensure the Security of Personal Information",
+    "paragraph4-1": "All personal information entered by the user will be destroyed without delay in 2 years from the end of the event in that year. Similarly, if a user wants to leave and directly contacts the company, all personal information will be destroyed as well. Information in the form of an electronic file is safely deleted so that it can not be recovered, and destroyed by crushing or incineration in the case of printed matter.",
+    "paragraph4-2": "However, information required to be preserved pursuant to relevant laws and regulations will be retained for a certain period of time.",
+    "paragraph4-3": "Records on the collection, processing, and use of credit information: 3 Years",
+    "paragraph4-4": "Records of consumer complaints or disputes: 3 Years",
+    "paragraph4-5": "Record of payment and goods supply: 5 Years",
+    "title5": "Privacy Officer",
+    "paragraph5-1": "We are responsible for the handling of personal information, and we have designated the person responsible for personal information protection as follows in order to handle complaints and damage remedies related to personal information processing. You can contact the person in charge of personal information protection directly about personal information protection inquiries, complaints handling and damage relief.",
+    "paragraph5-2": "Privacy Officer: Kwonhan Bae",
+    "paragraph5-3": "Contact:",
+    "title6": "Change of Personal Information Processing Policy",
+    "paragraph6": "If the above privacy policy changes, we will post the change and the changed privacy policy will take effect seven days after the date of posting. However, we will notify you at least 30 days in advance of any significant change in your rights, such as the items of personal information you collect."
+  },
+  "proposal": {
+    "sponsorLogoImageLabel": "Upload Logo"
+  }
+}
